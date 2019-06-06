@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "public"
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/bundle.(.*)", "dest": "/bundle.$1" },
+    { "src": "/favicon.png", "dest": "/favicon.png" },
+    { "src": "/global.css", "dest": "/global.css" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
