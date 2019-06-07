@@ -11,8 +11,8 @@
   ],
   "routes": [
     { "src": "/bundle.(.*)", "dest": "/bundle.$1" },
-    { "src": "/favicon.png", "dest": "/favicon.png" },
-    { "src": "/global.css", "dest": "/global.css" },
+    { "src": "/(.*).png", "dest": "/$1.png" },
+    { "src": "/(.*).css", "dest": "/$1.css" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
