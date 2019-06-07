@@ -3,7 +3,7 @@ const projects = [
     title: "RegexXP",
     description: "Something",
     image: "none",
-    website: "some link",
+    website: "https://www.regexxp.online",
     github: "some link",
     moreInfo: "another link"
   },
