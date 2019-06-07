@@ -1,5 +1,5 @@
 <script>
-  import Project from '../components/Project.svelte'
+  import ProjectCard from '../components/Project.svelte'
   import projects from '../data/projects'
   
 </script>
@@ -8,7 +8,7 @@
 <p>Hello hello hello</p>
 <div>
 {#each projects as project}
-  <Project {project} />
+  <ProjectCard {project} />
 {/each}
 </div>
 
