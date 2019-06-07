@@ -5,10 +5,6 @@
 
 <style>
   nav {
-    width: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
     padding: 20px;
     display: flex;
     justify-content: space-around;
@@ -25,7 +21,7 @@
   }
 
   button:hover {
-    outline: solid 1px rgb(159, 135, 124);
+    outline: solid 1px #555;
   }
 </style>
 
