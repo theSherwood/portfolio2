@@ -4,29 +4,30 @@
 
   export let project;
 
-  const {title, description, image, website, github, moreInfo} = project;
+  const { title, description, image, links, moreInfo } = project;
 </script>
 
 <div class="container">
   <h3>{title}</h3>
   <p>{description}</p>
   <section class="row">
-    <a href={website} target="_blank" rel="noopener noreferrer" class="six columns">
+    {#each Object.entries(links) as [key, value], i}
+    <a href={value} target="_blank" rel="noopener noreferrer" class="six columns">
       <button>
         <span>
-          <span>Website</span>
-          <GlobeIcon />
+          <span class="svg-wrapper">
+            <span>{key}</span>
+          {#if key === 'github'}
+            <GithubIcon />
+          {:else if key === 'info'}
+          {:else}
+            <GlobeIcon />
+          {/if}
+          </span>
         </span>
       </button>
-    </a>
-    <a href={github} target="_blank" rel="noopener noreferrer" class="six columns">
-      <button>
-        <span>
-          <span>Source</span>
-          <GithubIcon />
-        </span>
-      </button>
-    </a>
+    </a>  
+    {/each}
   </section>
 </div>
 
@@ -40,5 +41,17 @@
 
   button {
     width: 100%;
+  }
+
+  .svg-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .svg-wrapper :global(svg) {
+    align-self: center;
+    margin: 0em .5em;
   }
 </style>
