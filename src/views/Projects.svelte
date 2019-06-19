@@ -1,11 +1,11 @@
 <script>
   import ProjectCard from '../components/ProjectCard.svelte'
   import projects from '../data/projects'
-  
+  import { route } from "../stores/route";
+  export let router = {};
+  route.set(router.route.path);
 </script>
 
-<h3>Projects</h3>
-<p>Hello hello hello</p>
 <div>
 {#each projects as project}
   <ProjectCard {project} />
