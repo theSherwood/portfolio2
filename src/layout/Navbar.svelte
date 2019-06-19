@@ -2,7 +2,6 @@
   import {Link} from 'svero'
   import {route} from '../stores/route'
 
-  $: console.log($route)
 
 </script>
 
@@ -11,6 +10,11 @@
     padding: 20px;
     display: flex;
     justify-content: space-around;
+    --active-color: #ff3e00; 
+  }
+
+  nav :global(a):hover {
+    text-decoration: none;
   }
 
   button {
@@ -21,14 +25,15 @@
     border: none;
     padding: 5px;
     background: none;
+    border-bottom: 3px solid transparent;
   }
 
   button:hover {
-    outline: solid 1px #555;
+    border-bottom: 3px solid var(--active-color);
   }
 
   .active {
-    background: red;
+    border-bottom: 3px solid var(--active-color);
   }
 </style>
 
