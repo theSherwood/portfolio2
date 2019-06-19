@@ -1,6 +1,9 @@
 <script>
-  // import Button from "../components/Button.svelte";
   import {Link} from 'svero'
+  import {route} from '../stores/route'
+
+  $: console.log($route)
+
 </script>
 
 <style>
@@ -23,11 +26,15 @@
   button:hover {
     outline: solid 1px #555;
   }
+
+  .active {
+    background: red;
+  }
 </style>
 
 <nav>
-  <Link href="/"><button>Home</button></Link>
-  <Link href="/bio"><button>Bio</button></Link>
-  <Link href="/projects"><button>Projects</button></Link>
-  <Link href="/cv"><button>CV</button></Link>
+  <Link href="/"><button class:active="{$route === '*'}">Home</button></Link>
+  <Link href="/bio"><button class:active="{$route === '/bio'}">Bio</button></Link>
+  <Link href="/projects"><button class:active="{$route === '/projects'}">Projects</button></Link>
+  <Link href="/cv"><button class:active="{$route === '/cv'}">CV</button></Link>
 </nav>
