@@ -28,17 +28,29 @@
 
 <style>
   nav {
+    max-width: 800px;
+    margin: auto;
     padding: 20px;
-    display: flex;
-    justify-content: space-around;
-    --active-color: #ff3e00; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    --active-color:  black; /* #ff3e00; */
   }
 
   nav :global(a):hover {
     text-decoration: none;
   }
 
+  div {
+    flex: 1 1 auto;
+  }
+
+  a {
+    width: 100%;
+  }
+
   button {
+    width: 100%;
     box-sizing: border-box;
     margin: auto;
     position: relative;
@@ -47,15 +59,34 @@
     padding: 5px;
     background: none;
     border-radius: 0px;
-    transition: box-shadow 200ms ease-in;
+    color: #555555;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
     box-shadow: inset -15px 0px -15px var(--active-color);
   }
 
-  button:hover {
-    box-shadow: inset 0 -15px 40px -15px var(--active-color);
+  .active, button:hover {
+    box-shadow: inset 0 -15px 100px -15px var(--active-color);
+    color: white;
   }
 
-  .active {
-    box-shadow: inset 0 -15px 40px -15px var(--active-color);
+  @media only screen and (max-width: 600px) {
+    nav {
+      padding: 10px 0px;
+      font-size: 80%;
+      grid-gap: 1rem;
+    }
+
+    .active, button:hover {
+      box-shadow: inset 0 -15px 70px -15px var(--active-color);
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    nav {
+      padding: 0px;
+      padding-bottom: 10px;
+      font-size: 60%;
+      grid-gap: 1px;
+    }
   }
 </style>
