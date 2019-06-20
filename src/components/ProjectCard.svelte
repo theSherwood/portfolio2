@@ -7,12 +7,12 @@
   const { title, description, image, links, moreInfo } = project;
 </script>
 
-<div class="container">
+<div>
   <h3>{title}</h3>
   <p>{description}</p>
-  <section class="row">
+  <section>
     {#each Object.entries(links) as [key, value], i}
-    <a href={value} target="_blank" rel="noopener noreferrer" class="six columns">
+    <a href={value} target="_blank" rel="noopener noreferrer">
       <button>
         <span>
           <span class="svg-wrapper">
@@ -35,8 +35,18 @@
   div {
     padding: 20px;
     border: solid 1px rgba(85, 85, 85, 0.5);
-    flex: 0 0 300px;
-    margin: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  a {
+    width: 100%;
+  }
+
+  a:hover {
+    text-decoration: none;
   }
 
   button {
