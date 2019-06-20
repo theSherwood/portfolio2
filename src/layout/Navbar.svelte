@@ -8,7 +8,6 @@
 
   onMount(() => {
     mounted = true;
-    console.log(mounted);
   })
 
   function randDuration() {
@@ -60,7 +59,7 @@
     background: none;
     border-radius: 0px;
     color: #555555;
-    transition: box-shadow 600ms ease-in-out, color 600ms ease-in-out;
+    transition: box-shadow 500ms ease-in-out, color 500ms ease-in-out;
     box-shadow: inset -30px 0px -30px var(--active-color);
   }
 
