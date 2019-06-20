@@ -7,8 +7,8 @@
 </script>
 
 <div class="grid">
-  {#each projects as project}
-    <ProjectCard {project} />
+  {#each projects as project, i}
+    <ProjectCard {project} i={i}/>
   {/each}
 </div>
 
