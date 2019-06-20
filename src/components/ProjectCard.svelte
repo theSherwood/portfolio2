@@ -1,6 +1,7 @@
 <script>
   import {onMount} from 'svelte';
   import {fly} from 'svelte/transition';
+  import {Link} from 'svero';
   import GlobeIcon from "./GlobeIcon.svelte";
   import GithubIcon from "./GithubIcon.svelte";
 
@@ -16,7 +17,7 @@
 
   export let project;
 
-  const { title, description, image, links, moreInfo } = project;
+  const { title, description, image, links, info } = project;
 </script>
 
 {#if enter}
@@ -41,6 +42,15 @@
       </button>
     </a>  
     {/each}
+    <Link href={info}>
+      <button>
+        <span>
+          <span class="svg-wrapper">
+            <span>Info</span>
+          </span>
+        </span>
+      </button>
+    </Link>
   </section>
 </div>
 {/if}
