@@ -1,1 +1,63 @@
-# RegexXP
+<main>
+
+### RegexXp
+	
+#### Description
+	
+RegexXP is a learning tool for Javascript developers trying to improve their regular expression skills. The app allows users to create challenges and solve the challenges created by other users. It also contains a brief tutorial, covering the principal features of regex in Javascript.
+	
+#### Notable Tech Used
+	
+- **React** - UI
+- **Redux** - global state management
+- **Bootstrap** - CSS framework
+- **Express** - backend framework
+- **Node** - backend
+- **MongoDB** - database
+- **Mongoose** - ODM
+- **Passport, OAuth, JWT** - authentication strategies employed
+-	**Now** - serverless deployment
+	
+#### Overview
+	
+I started this project because I wanted to brush up on my regex skills. Originally, the UI was intended to be done in Handlebars. I quickly found that was an inadequate solution for creating the textareas that feature regex highlighting. I needed something a bit more powerful and reached for React (using the new Hooks API), leaving much of the Bootstrap styling in place.
+	
+The app was also originally deployed to Heroku. I have since deployed it with Now, instead, because I was curious about serverless and because Now makes https certification simple with custom domains.
+
+#### Smooth Sailing
+	
+This was my first solo project using basically any of these technologies. React and Redux were straightforward. I'd used them before on some tutorials. I'd had previous experience with ORMs for dealing with relational databases, and Mongoose was reminiscent of that. Deploying to Heroku was also straightforward.
+	
+#### Pain Points
+	
+- **Passport, OAuth, and JWT**
+    - This was complex. I've no doubt that Passport simplifies the process, but it was still tricky to muddle through. I wanted OAuth with Google and Github as well as authentication through email and password. I ended up using JWT for the email and password authentication and exchanging the tokens received from the Google and Github OAuth callbacks for JSON web tokens so that all the authentication processes ended up using the same system.
+- **Now**	
+    - Serverless deployment with Now was also incredibly tricky. I would get the RESTful backend routes working and the front end routing would break, and vice versa. Eventually, I figured out how to handle the client-side routing in the config file, and the process clicked into place.
+-	**Bootstrap** 
+    - Bootstrap sometimes got in the way as much as it helped. I personally quite like functional CSS (at least in theory), but I couldn't help but feel that I might be better off eschewing a CSS framework completely. Or perhaps the key is simply to become much more familiar with a particular framework.
+- **Highlightable Textarea**
+    - Making the highlightable textarea components was difficult. The differences in the way Firefox and Chrome handle some of the CSS made the process even more nightmareish. That said, the current version works well.
+
+#### Lessons Learned
+	
+- **React Hooks Api**
+    - The React Hooks API seems to me a considerable improvement on the class component system. For the most part, it makes reasoning about async events dead simple.
+- **CSS Frameworks**	
+    - Introducing a CSS framework from the beginning may be a mistake.
+- **Research**	
+    - Do better research. There are some great websites for learning regular expressions already, in particular [Regex101](https://regex101.com). There are also already ways to highlight text in a textarea. Use those solutions instead of building your own.
+	
+#### To Do
+	
+The highlightable textarea component is just a bit too tightly coupled. I need to extricate it and publish it as an npm package.
+	
+
+</main>
+
+<style>
+	main {
+		max-width: 800px;
+		margin: auto;
+	}
+</style>
