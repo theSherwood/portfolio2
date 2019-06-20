@@ -60,12 +60,12 @@
     background: none;
     border-radius: 0px;
     color: #555555;
-    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-    box-shadow: inset -15px 0px -15px var(--active-color);
+    transition: box-shadow 600ms ease-in-out, color 600ms ease-in-out;
+    box-shadow: inset -30px 0px -30px var(--active-color);
   }
 
   .active, button:hover {
-    box-shadow: inset 0 -15px 100px -15px var(--active-color);
+    box-shadow: inset 0 -30px 90px 0px var(--active-color);
     color: white;
   }
 
@@ -77,7 +77,7 @@
     }
 
     .active, button:hover {
-      box-shadow: inset 0 -15px 70px -15px var(--active-color);
+      box-shadow: inset 0 -30px 80px 0px var(--active-color);
     }
   }
 
