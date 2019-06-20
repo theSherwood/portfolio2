@@ -1,9 +1,10 @@
 <script>
-  import ProjectCard from "../components/ProjectCard.svelte"
-  import projects from "../data/projects"
+  import ProjectCard from "../components/ProjectCard.svelte";
+  import projects from "../data/projects";
   import { route } from "../stores/route";
   export let router = {};
   route.set(router.route.path);
+
 </script>
 
 <div class="grid">
@@ -14,7 +15,6 @@
 
 <style>
   .grid {
-    width: 90%;
     max-width: 800px;
     margin: auto;
     display: grid;
@@ -22,9 +22,9 @@
     grid-gap: 2rem;
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 500px) {
     .grid {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
   }
 
