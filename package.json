@@ -21,6 +21,7 @@
     "now-build": "rollup -c"
   },
   "dependencies": {
+    "mdsvex": "^0.3.0",
     "svero": "^0.5.0"
   }
 }
