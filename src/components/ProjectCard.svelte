@@ -1,13 +1,26 @@
 <script>
+  import {onMount} from 'svelte';
+  import {fly} from 'svelte/transition';
   import GlobeIcon from "./GlobeIcon.svelte";
   import GithubIcon from "./GithubIcon.svelte";
+
+  export let i;
+
+  let enter = 0;
+
+  onMount(() => {
+    setTimeout(() => {
+      enter = 300;
+    }, (i + 1) * 120)
+  })
 
   export let project;
 
   const { title, description, image, links, moreInfo } = project;
 </script>
 
-<div>
+{#if enter}
+<div in:fly="{{ y: 20, duration: enter }}">
   <h3>{title}</h3>
   <p>{description}</p>
   <section>
@@ -30,6 +43,7 @@
     {/each}
   </section>
 </div>
+{/if}
 
 <style>
   div {
