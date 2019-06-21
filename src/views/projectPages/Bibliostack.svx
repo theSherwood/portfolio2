@@ -1,1 +1,64 @@
-<h3>Bibliostack</h3>
+<main>
+
+### Bibliostack
+	
+#### Description
+	
+Bibliostack is a tool built for the avid reader with discerning taste. You want to read a lot, but you want to read *what you want to read*. Bibliostack searches ebay for your entire book wishlist at once. 
+	
+#### Notable Tech Used
+	
+- **React** - UI framework
+- **Material-UI** - component library
+- **Express** - RESTful api
+- **Node** - lambdas
+- **MongoDB** - database
+- **Mongoose** - ODM
+- **Passport, JWT** - authentication strategies
+-	**Now** - serverless deployment
+	
+#### Overview
+	
+This was originally among my first projects before I ever reached for a front end framework. It was an incredibly handy tool to have around Christmas. For some reason, the connection to Ebay's finding api broke down and the site ceased to work. I took the opportunity to rebuild the site in React, and try my hand at using a component library. 
+
+#### Smooth Sailing
+	
+I was already at least somewhat familiar with all of the technologies I used other than the Material-UI component library. I had also, already made a version of the site once before. I'd also gotten more comfortable with deployment with serverless deployment with Now. So, mostly, it went well.
+	
+#### Pain Points
+	
+- **Ebay API**
+    - Bizarre. I admit, the was tricky for me. I feel fairly comfortable with making api calls using JSON. However, Ebay has an incredibly complex developer api. The documentation is labyrinthine. And most of the examples are using XML or really long URL query strings. I am a lot less familiar with RESTful api's like that. I originally made the calls to the api using the URL query strings, but found the code to be messy. I finally managed to find some section of the documentation with information about how to configure the http request using the JSON format; the code cleaned up considerably.
+- **Material-UI**	
+    - Like my previous experience with Bootstrap on the RegexXP project, I found Material-UI to get in my way at least as much as it helped me. The components seem very well-designed to be as configurable as possible, but even so, I found myself stripping out Material-UI components fairly regularly. I've also got real doubts of the entire CSS-in-JS strategy. It is, at times, remarkably convenient. But 95% of the time, the benefits don't seem to outweigh the performance and ergonomic issues.
+- **Global State**
+    - I started this project without any kind of global state management, thinking I would add global state management if it became necessary. That was a mistake. Though the Bibliostack app is extremely small, it is large enough that global state would have been nice. I tried adding it in halfway through, but in many ways the damage was already done. The way everything was structured and coupled reflected the lack of global state management.
+
+#### Lessons Learned
+	
+- **CSS Frameworks and Component Libraries**
+    - I'm increasingly of the opinion that this stuff ought to be minimal if used at all. Maybe a few utility classes from the beginning, and maybe a component or two brought in that just seem perfect for the role, but I hesitate now to bring in some of this stuff from the get go *just in case* i need it. Plain ol' CSS works pretty dang well. If some styling needs to be dynamic, just use a style tag on the appropriate element within the component (or toggle classes). 
+- **Global State Management**
+    - In contrast to the extra styling and component libraries, global state management strategies should be in place from the beginning (at least for React). It's clear that it changes the way I structure my code; without global state management, components end up too tightly coupled. This is true even on small apps. That makes changes much harder to make and reusability more difficult.
+	
+#### To Do
+	
+Though it is useful as is, Bibliostack really ought to search more than ebay. At least Amazon.
+	
+Having access to multiple stacks (booklists) would be nice.
+	
+OAuth would be nice.
+	
+Stripping out all the CSS-in-JS cruft would also be nice.
+	
+Hell, just rewriting the whole thing in svelte would slim the whole thing down considerably.
+	
+
+</main>
+
+<style>
+	main {
+		max-width: 800px;
+		margin: auto;
+	}
+</style>
