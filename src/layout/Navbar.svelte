@@ -11,7 +11,7 @@
   })
 
   function randDuration() {
-    return (Math.random() * 800) + 400;
+    return (Math.random() * 900) + 400;
   }
 
 </script>
