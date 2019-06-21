@@ -47,6 +47,13 @@ const projects = [
       github: "https://github.com/theSherwood/reconjs-site"
     },
     info: "/reconjs-site"
+  },
+  {
+    title: "this",
+    description: "Something",
+    image: "none",
+    links: {},
+    info: "/portfolio"
   }
 ];
 
