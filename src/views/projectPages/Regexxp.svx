@@ -8,11 +8,11 @@ RegexXP is a learning tool for Javascript developers trying to improve their reg
 	
 #### Notable Tech Used
 	
-- **React** - UI
+- **React** - UI framework
 - **Redux** - global state management
 - **Bootstrap** - CSS framework
-- **Express** - backend framework
-- **Node** - backend
+- **Express** - RESTful api
+- **Node** - server
 - **MongoDB** - database
 - **Mongoose** - ODM
 - **Passport, OAuth, JWT** - authentication strategies employed
