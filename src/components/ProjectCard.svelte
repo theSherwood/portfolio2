@@ -21,9 +21,11 @@
 </script>
 
 {#if enter}
-<div in:fly="{{ y: 20, duration: enter }}">
-  <h3>{title}</h3>
-  <p>{description}</p>
+<div in:fly="{{ y: 20, duration: enter }}" class="card-container">
+  <di>
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </di>
   <section>
     {#each Object.entries(links) as [key, value], i}
     <a href={value} target="_blank" rel="noopener noreferrer">
@@ -31,12 +33,12 @@
         <span>
           <span class="svg-wrapper">
             <span>{key}</span>
-          {#if key === 'github'}
+          <!-- {#if key === 'github'}
             <GithubIcon />
           {:else if key === 'info'}
           {:else}
             <GlobeIcon />
-          {/if}
+          {/if} -->
           </span>
         </span>
       </button>
@@ -56,13 +58,21 @@
 {/if}
 
 <style>
-  div {
+  .card-container {
     padding: 20px;
-    border: solid 1px rgba(85, 85, 85, 0.5);
+    border: solid 1px rgba(0, 0, 0, 0.125);
     height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    --active-color:  black;
+      transition: box-shadow 500ms ease-in-out, color 500ms ease-in-out;
+    box-shadow: inset -30px 0px -30px var(--active-color);
+  }
+
+  .card-container:hover {
+    box-shadow: inset 0 -30px 200px 120px var(--active-color);
+    color: white;
   }
 
   a {
@@ -87,5 +97,25 @@
   .svg-wrapper :global(svg) {
     align-self: center;
     margin: 0em .5em;
+  }
+
+  button {
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    position: relative;
+    outline: none;
+    border: none;
+    padding: 5px;
+    background: white;
+    border-radius: 0px;
+    color: #555555;
+    transition: box-shadow 500ms ease-in-out, color 500ms ease-in-out;
+    box-shadow: inset -30px 0px -30px var(--active-color);
+  }
+
+  button:hover {
+    box-shadow: inset 0 -30px 100px 0px var(--active-color);
+    color: white;
   }
 </style>
