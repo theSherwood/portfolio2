@@ -24,8 +24,8 @@ const projects = [
     description: "Something",
     image: "none",
     links: {
-      website: "some link",
-      github: "some link"
+      demo: "https://thesherwood.github.io/Mentat/",
+      github: "https://github.com/theSherwood/Mentat"
     },
     info: "/mentat"
   },
@@ -34,7 +34,6 @@ const projects = [
     description: "Something",
     image: "none",
     links: {
-      website: "",
       github: "https://github.com/theSherwood/ReconJS"
     },
     info: "/reconjs"
