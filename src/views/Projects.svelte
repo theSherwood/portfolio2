@@ -20,6 +20,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 2rem;
+    margin-bottom: 8em;
   }
 
   @media only screen and (max-width: 500px) {
