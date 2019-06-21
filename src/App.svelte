@@ -12,6 +12,7 @@
   import Mentat from './views/projectPages/Mentat.svx'
   import Reconjs from './views/projectPages/Reconjs.svx'
   import ReconjsSite from './views/projectPages/ReconjsSite.svx'
+  import Portfolio from './views/projectPages/Portfolio.svx'
 </script>
 
 <Navbar />
@@ -27,5 +28,6 @@
   <Route path="/mentat" component={Mentat} />
   <Route path="/reconjs" component={Reconjs} />
   <Route path="/reconjs-site" component={ReconjsSite} />
+  <Route path="/portfolio" component={Portfolio} />
 </Router>
 
