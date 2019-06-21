@@ -1,1 +1,62 @@
-<h3>ReconJs</h3>
+<main>
+
+### ReconJS
+	
+#### Description
+	
+ReconJS is a tool for statically checking arbitrary Javascript code for security threats. Analyze code for safety before you run it.
+	
+All of us use code we didn't write. Whether we're using a plugin, running arbitrary user code in an app, or even just using node_modules; code we didn't write ourselves poses a security risk. But it is simply impractical to check all that code manually.
+	
+ReconJS was written to help. It flags code that uses potentially unsafe identifiers and returns the line and column numbers of offending code. You can also configure Recon to allow access to keywords you want to be available.
+	
+ReconJS is published on npm.
+	
+#### Notable Tech Used
+	
+- **Karma** - testing
+- **Jasmine** - testing
+- **AcornJS** - parser
+- **RollupJS** - bundler
+	
+#### Overview
+
+I originally tried building this project from absolute scratch. I wanted to make the package. as small as possible to make it easy to throw into web apps like [TiddlyWiki](https://tiddlywiki.com) where users have opportunities to run arbitrary foreign code.
+	
+That meant building my own parser and tokenizer. I thought that I would not need all the data of a full-blown abstract syntax tree.
+	
+Ultimately, scope was too complex sort out without a full-blown abstract syntax tree. So I had to abandon all the work (and tests) I'd done and start over.
+	
+This time I used AcornJS to build the AST, and built ReconJS directly on top of that.
+
+#### Smooth Sailing
+	
+Once I had Acorn building the AST, it was pretty straightforward. Prior to that, writing lots of tests kept the project manageable for quite some time (until I hit scope). 
+	
+#### Pain Points
+	
+- **Scope*
+    - Scope is simply too complex to model without an AST. Without scope modeling, you can never actually whitelist a declared identifier because you can't tell what uses of that identifier fall outside the declaration scope. So the whole project is fundamentally unfeasible without out. Once you have an AST though, scope becomes manageable.
+- **Rollup and Module Bundling**
+    - This was my first experience with Rollup in particular and module bundling more generally. The whole issue of commonjs type modules vs ecmascript modules is a royal pain, particularly because some formats will work better with some bundlers than others.
+
+#### Lessons Learned
+	
+- **Complexity**
+    - Some kinds of complex systems can be developed stochastically. Parsing is not one of these. If a system needs to be cohesively designed rather than ad hoc and evolved, you must be teleological about it.
+	
+#### To Do
+	
+Support for ES7+.
+
+Using ReconJS to check files, as a command line tool, rather than using it programmatically and passing in strings of code.
+	
+
+</main>
+
+<style>
+	main {
+		max-width: 800px;
+		margin: auto;
+	}
+</style>
