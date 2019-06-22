@@ -1,0 +1,1 @@
+Bibliostack is a tool built for the avid reader with discerning taste. You want to read a lot, but you want to read *what you want to read*. Bibliostack searches ebay for your entire book wishlist at once.
