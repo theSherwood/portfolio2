@@ -60,19 +60,22 @@
 <style>
   .card-container {
     padding: 20px;
-    border: solid 1px rgba(0, 0, 0, 0.125);
+    /* border: solid 10px rgba(0, 0, 0, .5); */
+    /* border: solid 1px rgba(255, 255, 255, .3); */
     height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     --active-color:  black;
-      transition: box-shadow 500ms ease-in-out, color 500ms ease-in-out;
+    --contrast-color: white;
+    transition: box-shadow 500ms ease-in-out, color 500ms ease-in-out;
     box-shadow: inset -30px 0px -30px var(--active-color);
   }
 
   .card-container:hover {
     box-shadow: inset 0 -30px 200px 120px var(--active-color);
-    color: white;
+    /* border: solid 10px rgba(255, 255, 255, .3); */
+    color: var(--contrast-color);
   }
 
   a {
@@ -107,15 +110,15 @@
     outline: none;
     border: none;
     padding: 5px;
-    background: white;
+    background: transparent;
     border-radius: 0px;
-    color: #555555;
+    color: var(--contrast-color);
     transition: box-shadow 500ms ease-in-out, color 500ms ease-in-out;
-    box-shadow: inset -30px 0px -30px var(--active-color);
+    box-shadow: inset -30px 0px -30px var(--contrast-color);
   }
 
   button:hover {
-    box-shadow: inset 0 -30px 100px 0px var(--active-color);
-    color: white;
+    box-shadow: inset 0 -30px 100px 0px var(--contrast-color);
+    color: var(--active-color);
   }
 </style>
