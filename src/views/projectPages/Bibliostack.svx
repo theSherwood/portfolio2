@@ -1,5 +1,3 @@
-<main>
-
 ### Bibliostack
 	
 #### Description
@@ -52,13 +50,4 @@ OAuth would be nice.
 Stripping out all the CSS-in-JS cruft would also be nice.
 	
 Hell, just rewriting the whole thing in svelte would slim the whole thing down considerably.
-	
 
-</main>
-
-<style>
-	main {
-		max-width: 800px;
-		margin: auto;
-	}
-</style>

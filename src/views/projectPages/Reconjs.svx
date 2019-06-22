@@ -1,5 +1,3 @@
-<main>
-
 ### ReconJS
 	
 #### Description
@@ -50,13 +48,3 @@ Once I had Acorn building the AST, it was pretty straightforward. Prior to that,
 Support for ES7+.
 
 Using ReconJS to check files, as a command line tool, rather than using it programmatically and passing in strings of code.
-	
-
-</main>
-
-<style>
-	main {
-		max-width: 800px;
-		margin: auto;
-	}
-</style>

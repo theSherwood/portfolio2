@@ -1,5 +1,3 @@
-<main>
-
 ### Mentat
 	
 #### Description
@@ -58,13 +56,3 @@ Mobile version. The current version is very much about creating a desktop worksp
 Recursion. At present, window tiddlers cannot contain other window tiddlers.
 	
 Cloud dashboard. The current state of Mentat has made great use of Volant tiddlers that are fixed to the screen. Those Volant tiddlers that are not fixed to the screen could use some love.
-	
-
-</main>
-
-<style>
-	main {
-		max-width: 800px;
-		margin: auto;
-	}
-</style>
