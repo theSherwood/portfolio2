@@ -1,1 +1,9 @@
+```js exex
+
+  import PortfolioBlurb from '../../data/descriptions/PortfolioBlurb.svx'
+
+```
+
 ### Portfolio
+
+<PortfolioBlurb />

@@ -1,13 +1,14 @@
+```js exec
+
+  import MentatBlurb from '../../data/descriptions/MentatBlurb.svx'
+
+```
+
 ### Mentat
 	
 #### Description
 	
-Mentat is actually a series of 4 plugins: Repopup, Volant, Engine, and Mentat for the [TiddlyWiki](https://tiddlywiki.com/) platform. Each plugin builds on the last. Together, they create a platform for users to radically configure the UI of their wiki intuitively and with speed. They also form a base from which even more adventurous UI solutions can be developed.
-	
-- **Repopup** handles popups and popovers native to TiddlyWiki to make them compatible with the other 3 plugins.
-- **Volant** allows a user to add a tag to a tiddler (the basic atomic building block of TiddlyWiki) that makes the tiddler positionable through dragging and dropping. Tags of the user's choosing can also be imbued with the same power. Volant also has a convenient snapping system built in.
-- **Engine** uses Volant tiddlers to create a highly configurable heads up display. Taskbars, menu bars, side bars of the user's choosing and design can quickly snap into place. It comes with some useful defaults.
-- **Mentat** brings it all together, adding positionable windows with scrolling tab bars, and powerful navigation between different window instances. Save layouts, window sessions, or entire multi-window sessions for later.
+<MentatBlurb />
 	
 #### Notable Tech Used
 	

@@ -1,1 +1,9 @@
-<h3>ReconJs Site</h3>
+```js exec
+
+  import ReconjsSiteBlurb from '../../data/descriptions/ReconjsSiteBlurb.svx'
+
+```
+
+### ReconJS Site
+
+<ReconjsSiteBlurb />
