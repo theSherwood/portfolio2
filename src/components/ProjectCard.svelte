@@ -2,8 +2,13 @@
   import {onMount} from 'svelte';
   import {fly} from 'svelte/transition';
   import {Link} from 'svero';
-  import GlobeIcon from "./GlobeIcon.svelte";
-  import GithubIcon from "./GithubIcon.svelte";
+  
+  import RegexxpBlurb from '../data/descriptions/RegexxpBlurb.svx'
+  import BibliostackBlurb from '../data/descriptions/BibliostackBlurb.svx'
+  import MentatBlurb from '../data/descriptions/MentatBlurb.svx'
+  import ReconjsBlurb from '../data/descriptions/ReconjsBlurb.svx'
+  import ReconjsSiteBlurb from '../data/descriptions/ReconjsSiteBlurb.svx'
+  import PortfolioBlurb from '../data/descriptions/PortfolioBlurb.svx'
 
   export let i;
 
@@ -17,14 +22,23 @@
 
   export let project;
 
-  const { title, description, image, links, info } = project;
+  const { title, image, links, info } = project;
+
+  const blurbs = {
+    regexxp: RegexxpBlurb,
+    bibliostack: BibliostackBlurb,
+    mentat: MentatBlurb,
+    reconjs: ReconjsBlurb,
+    "reconjs-site": ReconjsSiteBlurb,
+    portfolio: PortfolioBlurb
+  };
 </script>
 
 {#if enter}
 <div in:fly="{{ y: 40, duration: enter }}" out:fly="{{ y: 800, duration: enter }}" class="card-container">
   <di>
     <h3>{title}</h3>
-    <p>{description}</p>
+    <svelte:component this={blurbs[info]} />
   </di>
   <section>
     {#each Object.entries(links) as [key, value], i}
@@ -38,7 +52,7 @@
       </button>
     </a>  
     {/each}
-    <Link href={"/projects" + info}>
+    <Link href={"/projects/" + info}>
       <button>
         <span>
           <span class="svg-wrapper">
@@ -126,7 +140,7 @@
   }
 
   button:hover {
-    box-shadow: inset 0 -30px 100px 0px var(--contrast-color);
+    box-shadow: inset 0 -20px 50px 0px var(--contrast-color);
     color: var(--active-color);
   }
 </style>
