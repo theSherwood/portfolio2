@@ -1,7 +1,7 @@
 <script>
   export let name;
-  import Navbar from './layout/Navbar.svelte'
-  import Home from './views/Home.svelte'
+  import Navbar from './layout/Navbar.svelte';
+  import Home from './views/Home.svelte';
   import CV from './views/CV.svelte'
   import Bio from './views/Bio.svelte'
   import Projects from './views/Projects.svelte'
@@ -15,19 +15,38 @@
   import Portfolio from './views/projectPages/Portfolio.svx'
 </script>
 
+<img class="backdrop" src="/images/milkyway.jpg" >
 <Navbar />
-<Router>
-  <Route path="*" component={Home} />
-  <Route path="/projects" component={Projects} />
-  <Route path="/bio" component={Bio} />
-  <Route path="/cv" component={CV} />
+<div class="views-container">
+  <Router>
+    <Route path="*" component={Home} />
+    <Route path="/projects" component={Projects} />
+    <Route path="/bio" component={Bio} />
+    <Route path="/cv" component={CV} />
 
-  <!-- Project Routes -->
-  <Route path="/regexxp" component={Regexxp} />
-  <Route path="/bibliostack" component={Bibliostack} />
-  <Route path="/mentat" component={Mentat} />
-  <Route path="/reconjs" component={Reconjs} />
-  <Route path="/reconjs-site" component={ReconjsSite} />
-  <Route path="/portfolio" component={Portfolio} />
-</Router>
+    <!-- Project Routes -->
+    <Route path="/regexxp" component={Regexxp} />
+    <Route path="/bibliostack" component={Bibliostack} />
+    <Route path="/mentat" component={Mentat} />
+    <Route path="/reconjs" component={Reconjs} />
+    <Route path="/reconjs-site" component={ReconjsSite} />
+    <Route path="/portfolio" component={Portfolio} />
+  </Router>
+</div>
+
+<style>
+  .backdrop {
+    filter: grayscale(1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .views-container {
+    padding: 0;
+  }
+</style>
 
