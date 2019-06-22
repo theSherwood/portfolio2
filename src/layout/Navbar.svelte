@@ -33,7 +33,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 2rem;
-    --active-color:  black; /* #ff3e00; */
+    --active-color:  white;
+    --contrast-color: black;
   }
 
   nav :global(a):hover {
@@ -58,14 +59,14 @@
     padding: 5px;
     background: none;
     border-radius: 0px;
-    color: #555555;
+    color: var(--active-color); /* #555555; */
     transition: box-shadow 500ms ease-in-out, color 500ms ease-in-out;
     box-shadow: inset -30px 0px -30px var(--active-color);
   }
 
   .active, button:hover {
     box-shadow: inset 0 -30px 90px 0px var(--active-color);
-    color: white;
+    color: var(--contrast-color);
   }
 
   @media only screen and (max-width: 600px) {
