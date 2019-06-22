@@ -1,19 +1,14 @@
 <script>
+  import {Router, Route} from 'svero'
+  import {onMount} from 'svelte'
+  import {fade, fly} from 'svelte/transition'
+  
   import Navbar from './layout/Navbar.svelte';
   import Home from './views/Home.svelte';
   import CV from './views/CV.svelte'
   import Bio from './views/Bio.svelte'
   import Projects from './views/Projects.svelte'
-  import {Router, Route} from 'svero'
-  import {onMount} from 'svelte'
-  import {fade, fly} from 'svelte/transition'
-
-  import Regexxp from './views/projectPages/Regexxp.svx'
-  import Bibliostack from './views/projectPages/Bibliostack.svx'
-  import Mentat from './views/projectPages/Mentat.svx'
-  import Reconjs from './views/projectPages/Reconjs.svx'
-  import ReconjsSite from './views/projectPages/ReconjsSite.svx'
-  import Portfolio from './views/projectPages/Portfolio.svx'
+  import ProjectWrapper from './views/ProjectWrapper.svelte'
 
   let showBackdrop = false;
   let animate = false;
@@ -27,7 +22,7 @@
 </script>
 
 {#if showBackdrop}
-<div in:fade="{{duration: 2000}}" class="backdrop" class:animate></div>
+<div in:fade="{{duration: 3000}}" class="backdrop" class:animate></div>
 {/if}
 <Navbar />
 <div class="views-container">
@@ -38,12 +33,7 @@
     <Route path="/cv" component={CV} />
 
     <!-- Project Routes -->
-    <Route path="/regexxp" component={Regexxp} />
-    <Route path="/bibliostack" component={Bibliostack} />
-    <Route path="/mentat" component={Mentat} />
-    <Route path="/reconjs" component={Reconjs} />
-    <Route path="/reconjs-site" component={ReconjsSite} />
-    <Route path="/portfolio" component={Portfolio} />
+    <Route path="/projects/:project" component={ProjectWrapper} />
   </Router>
 </div>
 
