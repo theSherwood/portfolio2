@@ -7,7 +7,7 @@
 
   export let i;
 
-  let enter = 0;
+  export let enter = 0;
 
   onMount(() => {
     setTimeout(() => {
@@ -21,7 +21,7 @@
 </script>
 
 {#if enter}
-<div in:fly="{{ y: 20, duration: enter }}" class="card-container">
+<div in:fly="{{ y: 40, duration: enter }}" out:fly="{{ y: 800, duration: enter }}" class="card-container">
   <di>
     <h3>{title}</h3>
     <p>{description}</p>
@@ -33,22 +33,16 @@
         <span>
           <span class="svg-wrapper">
             <span>{key}</span>
-          <!-- {#if key === 'github'}
-            <GithubIcon />
-          {:else if key === 'info'}
-          {:else}
-            <GlobeIcon />
-          {/if} -->
           </span>
         </span>
       </button>
     </a>  
     {/each}
-    <Link href={info}>
+    <Link href={"/projects" + info}>
       <button>
         <span>
           <span class="svg-wrapper">
-            <span>Info</span>
+            <span>Process</span>
           </span>
         </span>
       </button>
@@ -60,22 +54,36 @@
 <style>
   .card-container {
     padding: 20px;
-    /* border: solid 10px rgba(0, 0, 0, .5); */
-    /* border: solid 1px rgba(255, 255, 255, .3); */
     height: 300px;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: space-between;
     --active-color:  black;
     --contrast-color: white;
-    transition: box-shadow 500ms ease-in-out, color 500ms ease-in-out;
-    box-shadow: inset -30px 0px -30px var(--active-color);
+    transition: color 500ms ease-in-out;
+  }
+
+  .card-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: .5;
+    transition: opacity 500ms ease-in;
+    background: rgb(0,0,0);
+    background: radial-gradient(ellipse at 80% 30%, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.8) 33%, rgba(0,0,0,0.9) 57%, rgba(0,0,0,1) 100%);
+    z-index: -1;
   }
 
   .card-container:hover {
-    box-shadow: inset 0 -30px 200px 120px var(--active-color);
-    /* border: solid 10px rgba(255, 255, 255, .3); */
-    color: var(--contrast-color);
+    color: var(--contrast-color);  
+  }
+
+  .card-container:hover::before {
+    opacity: 1;
   }
 
   a {
