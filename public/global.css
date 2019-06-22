@@ -6,26 +6,43 @@ body {
 }
 
 body {
-  color: #333;
+  color: #999; /* #333; */
   margin: 0;
   padding: 8px;
+  background: black;
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 a {
-  color: rgb(0, 100, 200);
+  color: white; /* rgb(0, 100, 200); */
   text-decoration: none;
+  position: relative;
 }
 
 a:hover {
   text-decoration: underline;
+  color: white;
+  z-index: 10;
 }
 
-a:visited {
-  color: rgb(0, 80, 160);
+/* a::before {
+  opacity: 0;
+  content: "";
+  background: red;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  z-index: -10;
+  transition: opacity 200ms ease-in;
 }
+
+a:hover::before {
+  opacity: 1;
+} */
 
 label {
   display: block;
