@@ -19,24 +19,24 @@
 <nav>
   {#if mounted}
   <div transition:fly="{{y: -50, duration: randDuration() }}">
-    <DelayLink href="/" delay="{500}" callback="{pageTransitionHelper}"
+    <DelayLink href="/" delay="{200}" callback="{pageTransitionHelper}"
       ><button class:active="{$route === '*'}">Home</button></DelayLink
     >
   </div>
   <div transition:fly="{{y: -50, duration: randDuration() }}">
-    <DelayLink href="/bio" delay="{500}" callback="{pageTransitionHelper}"
+    <DelayLink href="/bio" delay="{200}" callback="{pageTransitionHelper}"
       ><button class:active="{$route === '/bio'}">Bio</button></DelayLink
     >
   </div>
   <div transition:fly="{{y: -50, duration: randDuration() }}">
-    <DelayLink href="/projects" delay="{500}" callback="{pageTransitionHelper}"
+    <DelayLink href="/projects" delay="{200}" callback="{pageTransitionHelper}"
       ><button class:active="{$route === '/projects'}">
         Projects
       </button></DelayLink
     >
   </div>
   <div transition:fly="{{y: -50, duration: randDuration() }}">
-    <DelayLink href="/cv" delay="{500}" callback="{pageTransitionHelper}"
+    <DelayLink href="/cv" delay="{200}" callback="{pageTransitionHelper}"
       ><button class:active="{$route === '/cv'}">CV</button></DelayLink
     >
   </div>
