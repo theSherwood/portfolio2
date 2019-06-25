@@ -80,6 +80,7 @@
     color: var(--active-color); /* #555555; */
     transition: box-shadow 500ms ease-in-out, color 500ms ease-in-out;
     box-shadow: inset -30px 0px -30px var(--active-color);
+    line-height: 0px;
   }
 
   .active,
