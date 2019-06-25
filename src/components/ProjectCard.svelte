@@ -2,6 +2,8 @@
   import {onMount} from 'svelte';
   import {fly} from 'svelte/transition';
   import {Link} from 'svero';
+  import { pageTransition } from '../stores/pageTransition';
+  import { pageTransitionHelper } from '../helpers/pageTransitionHelper';
   
   import DelayLink from './DelayLink.svelte'
   import RegexxpBlurb from '../data/descriptions/RegexxpBlurb.svx'
@@ -21,6 +23,10 @@
     }, (i + 1) * 120)
   })
 
+  $: if ($pageTransition) {
+    enter = 0;
+  }
+
   export let project;
 
   const { title, image, links, info } = project;
@@ -36,7 +42,7 @@
 </script>
 
 {#if enter}
-<div in:fly="{{ y: 40, duration: enter }}" out:fly="{{ y: 800, duration: enter }}" class="card-container">
+<div in:fly="{{ y: 40, duration: enter }}" out:fly="{{ y: 80, duration: 200 }}" class="card-container">
   <div class="title-container">
     <h3>{title}</h3>
     <svelte:component this={blurbs[info]} />
@@ -53,7 +59,7 @@
       </button>
     </a>  
     {/each}
-    <DelayLink href={"/projects/" + info} delay={300}>
+    <DelayLink href={"/projects/" + info} delay={200} callback={pageTransitionHelper}>
       <button>
         <span>
           <span class="svg-wrapper">
