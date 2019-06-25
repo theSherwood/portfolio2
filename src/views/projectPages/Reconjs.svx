@@ -23,7 +23,7 @@ I originally tried building this project from absolute scratch. I wanted to make
 	
 That meant building my own parser and tokenizer. I thought that I would not need all the data of a full-blown abstract syntax tree.
 	
-Ultimately, scope was too complex sort out without a full-blown abstract syntax tree. So I had to abandon all the work (and tests) I'd done and start over.
+Ultimately, scope was too complex to sort out without a full-blown abstract syntax tree. So I had to abandon all the work (and tests) I'd done and start over.
 	
 This time I used AcornJS to build the AST, and built ReconJS directly on top of that.
 
