@@ -6,12 +6,6 @@
   import { pageTransitionHelper } from '../helpers/pageTransitionHelper';
   
   import DelayLink from './DelayLink.svelte'
-  import RegexxpBlurb from '../data/descriptions/RegexxpBlurb.svx'
-  import BibliostackBlurb from '../data/descriptions/BibliostackBlurb.svx'
-  import MentatBlurb from '../data/descriptions/MentatBlurb.svx'
-  import ReconjsBlurb from '../data/descriptions/ReconjsBlurb.svx'
-  import ReconjsSiteBlurb from '../data/descriptions/ReconjsSiteBlurb.svx'
-  import PortfolioBlurb from '../data/descriptions/PortfolioBlurb.svx'
 
   export let i;
 
@@ -29,23 +23,14 @@
 
   export let project;
 
-  const { title, image, links, info } = project;
-
-  const blurbs = {
-    regexxp: RegexxpBlurb,
-    bibliostack: BibliostackBlurb,
-    mentat: MentatBlurb,
-    reconjs: ReconjsBlurb,
-    "reconjs-site": ReconjsSiteBlurb,
-    portfolio: PortfolioBlurb
-  };
+  const { title, image, links, info, blurb } = project;
 </script>
 
 {#if enter}
 <div in:fly="{{ y: 40, duration: enter }}" out:fly="{{ y: 80, duration: 200 }}" class="card-container">
   <div class="title-container">
     <h3>{title}</h3>
-    <svelte:component this={blurbs[info]} />
+    <p>{blurb}</p>
   </div>
   <section>
     {#each Object.entries(links) as [key, value], i}
