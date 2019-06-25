@@ -2,6 +2,8 @@
   import { Router, Route } from "svero";
   import { onMount } from "svelte";
   import { fade, fly } from "svelte/transition";
+  import { pageTransition } from "../stores/pageTransition";
+  import { pageTransitionHelper } from "../helpers/pageTransitionHelper";
 
   import Regexxp from "./projectPages/Regexxp.svx";
   import Bibliostack from "./projectPages/Bibliostack.svx";
@@ -12,6 +14,14 @@
 
   export let router = {};
   const param = router.params.project;
+
+  let render = false;
+  onMount(() => {
+    render = true;
+  });
+  $: if ($pageTransition) {
+    render = false;
+  }
 
   const routes = {
     regexxp: Regexxp,
@@ -25,9 +35,11 @@
   let component = routes[param];
 </script>
 
-<main>
+{#if render}
+<main in:fly="{{ y: 80, duration: 400}}" out:fly="{{ y: 80, duration: 200}}">
   <svelte:component this="{component}" />
 </main>
+{/if}
 
 <style>
   main {
