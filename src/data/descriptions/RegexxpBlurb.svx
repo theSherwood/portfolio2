@@ -1,1 +1,0 @@
-RegexXP is a educational app for Javascript developers trying to improve their regular expression skills. The app allows users to create challenges and solve the challenges created by other users. It also contains a brief tutorial, covering the principal features of regex in Javascript.

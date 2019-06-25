@@ -1,7 +1,0 @@
-ReconJS is a tool for statically checking arbitrary Javascript code for security threats. Analyze code for safety before you run it.
-	
-All of us use code we didn't write. Whether we're using a plugin, running arbitrary user code in an app, or even just using node_modules; code we didn't write ourselves poses a security risk. But it is simply impractical to check all that code manually.
-	
-ReconJS was written to help. It flags code that uses potentially unsafe identifiers and returns the line and column numbers of offending code. You can also configure Recon to allow access to keywords you want to be available.
-	
-ReconJS is published on npm.

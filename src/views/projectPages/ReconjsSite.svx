@@ -1,9 +1,2 @@
-```js exec
-
-  import ReconjsSiteBlurb from '../../data/descriptions/ReconjsSiteBlurb.svx'
-
-```
-
 ### ReconJS Site
 
-<ReconjsSiteBlurb />
