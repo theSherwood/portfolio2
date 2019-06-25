@@ -3,6 +3,7 @@
   import { fly, fade } from "svelte/transition";
   import DelayLink from "../components/DelayLink.svelte";
   import { route } from "../stores/route";
+  import { pageTransitionHelper } from "../helpers/pageTransitionHelper";
 
   let mounted = false;
 
@@ -18,24 +19,24 @@
 <nav>
   {#if mounted}
   <div transition:fly="{{y: -50, duration: randDuration() }}">
-    <DelayLink href="/" delay="{500}"
+    <DelayLink href="/" delay="{500}" callback="{pageTransitionHelper}"
       ><button class:active="{$route === '*'}">Home</button></DelayLink
     >
   </div>
   <div transition:fly="{{y: -50, duration: randDuration() }}">
-    <DelayLink href="/bio" delay="{500}"
+    <DelayLink href="/bio" delay="{500}" callback="{pageTransitionHelper}"
       ><button class:active="{$route === '/bio'}">Bio</button></DelayLink
     >
   </div>
   <div transition:fly="{{y: -50, duration: randDuration() }}">
-    <DelayLink href="/projects" delay="{500}"
+    <DelayLink href="/projects" delay="{500}" callback="{pageTransitionHelper}"
       ><button class:active="{$route === '/projects'}">
         Projects
       </button></DelayLink
     >
   </div>
   <div transition:fly="{{y: -50, duration: randDuration() }}">
-    <DelayLink href="/cv" delay="{500}"
+    <DelayLink href="/cv" delay="{500}" callback="{pageTransitionHelper}"
       ><button class:active="{$route === '/cv'}">CV</button></DelayLink
     >
   </div>
