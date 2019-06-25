@@ -1,27 +1,44 @@
 <script>
-  import {onMount} from 'svelte';
-  import {fly, fade} from 'svelte/transition';
-  import {Link} from 'svero';
-  import {route} from '../stores/route';
+  import { onMount } from "svelte";
+  import { fly, fade } from "svelte/transition";
+  import DelayLink from "../components/DelayLink.svelte";
+  import { route } from "../stores/route";
 
   let mounted = false;
 
   onMount(() => {
     mounted = true;
-  })
+  });
 
   function randDuration() {
-    return (Math.random() * 900) + 400;
+    return Math.random() * 900 + 400;
   }
-
 </script>
 
 <nav>
   {#if mounted}
-    <div transition:fly="{{y: -50, duration: randDuration() }}"><Link href="/"><button class:active="{$route === '*'}">Home</button></Link></div>
-    <div transition:fly="{{y: -50, duration: randDuration() }}"><Link href="/bio"><button class:active="{$route === '/bio'}">Bio</button></Link></div>
-    <div transition:fly="{{y: -50, duration: randDuration() }}"><Link href="/projects"><button class:active="{$route === '/projects'}">Projects</button></Link></div>
-    <div transition:fly="{{y: -50, duration: randDuration() }}"><Link href="/cv"><button class:active="{$route === '/cv'}">CV</button></Link></div>
+  <div transition:fly="{{y: -50, duration: randDuration() }}">
+    <DelayLink href="/" delay="{500}"
+      ><button class:active="{$route === '*'}">Home</button></DelayLink
+    >
+  </div>
+  <div transition:fly="{{y: -50, duration: randDuration() }}">
+    <DelayLink href="/bio" delay="{500}"
+      ><button class:active="{$route === '/bio'}">Bio</button></DelayLink
+    >
+  </div>
+  <div transition:fly="{{y: -50, duration: randDuration() }}">
+    <DelayLink href="/projects" delay="{500}"
+      ><button class:active="{$route === '/projects'}">
+        Projects
+      </button></DelayLink
+    >
+  </div>
+  <div transition:fly="{{y: -50, duration: randDuration() }}">
+    <DelayLink href="/cv" delay="{500}"
+      ><button class:active="{$route === '/cv'}">CV</button></DelayLink
+    >
+  </div>
   {/if}
 </nav>
 
@@ -33,7 +50,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 2rem;
-    --active-color:  white;
+    --active-color: white;
     --contrast-color: black;
   }
 
@@ -64,7 +81,8 @@
     box-shadow: inset -30px 0px -30px var(--active-color);
   }
 
-  .active, button:hover {
+  .active,
+  button:hover {
     box-shadow: inset 0 -30px 90px 0px var(--active-color);
     color: var(--contrast-color);
   }
@@ -76,7 +94,8 @@
       grid-gap: 1rem;
     }
 
-    .active, button:hover {
+    .active,
+    button:hover {
       box-shadow: inset 0 -30px 80px 0px var(--active-color);
     }
   }
