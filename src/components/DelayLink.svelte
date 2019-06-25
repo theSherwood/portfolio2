@@ -6,15 +6,21 @@
   export let href = "/";
   export let className = "";
   export { cssClass as class };
+
   export let delay = 0;
+  export let callback = () => {};
+  export let delayedCallback = () => {};
 
   onMount(() => {
     className = className || cssClass;
   });
 
   function handleClick() {
+    const cleanup = callback();
     if (delay) {
       setTimeout(() => {
+        if (cleanup) cleanup();
+        delayedCallback();
         navigateTo(href);
       }, delay);
     } else {
