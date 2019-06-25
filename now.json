@@ -11,6 +11,7 @@
   ],
   "routes": [
     { "src": "/bundle.(.*)", "dest": "/bundle.$1" },
+    { "src": "/(.*).jpg", "dest": "/$1.jpg" },
     { "src": "/(.*).png", "dest": "/$1.png" },
     { "src": "/(.*).css", "dest": "/$1.css" },
     { "src": "/(.*)", "dest": "/index.html" }
