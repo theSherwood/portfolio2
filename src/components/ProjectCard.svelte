@@ -3,6 +3,7 @@
   import {fly} from 'svelte/transition';
   import {Link} from 'svero';
   
+  import DelayLink from './DelayLink.svelte'
   import RegexxpBlurb from '../data/descriptions/RegexxpBlurb.svx'
   import BibliostackBlurb from '../data/descriptions/BibliostackBlurb.svx'
   import MentatBlurb from '../data/descriptions/MentatBlurb.svx'
@@ -36,10 +37,10 @@
 
 {#if enter}
 <div in:fly="{{ y: 40, duration: enter }}" out:fly="{{ y: 800, duration: enter }}" class="card-container">
-  <di>
+  <div class="title-container">
     <h3>{title}</h3>
     <svelte:component this={blurbs[info]} />
-  </di>
+  </div>
   <section>
     {#each Object.entries(links) as [key, value], i}
     <a href={value} target="_blank" rel="noopener noreferrer">
@@ -52,7 +53,7 @@
       </button>
     </a>  
     {/each}
-    <Link href={"/projects/" + info}>
+    <DelayLink href={"/projects/" + info} delay={300}>
       <button>
         <span>
           <span class="svg-wrapper">
@@ -60,7 +61,7 @@
           </span>
         </span>
       </button>
-    </Link>
+    </DelayLink>
   </section>
 </div>
 {/if}
@@ -98,6 +99,20 @@
 
   .card-container:hover::before {
     opacity: 1;
+  }
+
+  .title-container {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .title-container::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2em;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%)
   }
 
   a {
