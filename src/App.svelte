@@ -19,15 +19,15 @@
   let count = -1;
   onMount(() => {
     setTimeout(() => {
-      count++;
+      count += 1;
     }, 50)
     setInterval(() => {
       advanceSlide()
-    }, 700000)
+    }, 30000)
   })
 
   function advanceSlide() {
-    count++
+    count += 1;
     const nextBackdrop = (count + 1) % 3;
     const nextUrl = (count + 1) % urls.length;
     backdrops[nextBackdrop] = urls[nextUrl];
@@ -35,8 +35,21 @@
     backdrops = backdrops;
   }
 
+  function retreatSlide() {
+    count = count - 1 < 0 ? urls.length - 1 - count : count - 1;
+    const previousBackdrop = (count - 1) % 3;
+    const previousUrl = (count - 1) % urls.length;
+    backdrops[previousBackdrop] = urls[previousUrl];
+    //Force reactivity
+    backdrops = backdrops;
+  }
+
   function handleKeydown(e) {
-    if (e.key === "ArrowRight" ) advanceSlide();
+    if (e.key === "ArrowRight" ) {
+      advanceSlide();
+    } else if (e.key === "ArrowLeft" ) {
+      retreatSlide();
+    }
   }
 
 </script>
