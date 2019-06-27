@@ -22,11 +22,11 @@
       count++;
     }, 50)
     setInterval(() => {
-      toggleAnimate()
-    }, 7000)
+      advanceSlide()
+    }, 700000)
   })
 
-  function toggleAnimate() {
+  function advanceSlide() {
     count++
     const nextBackdrop = (count + 1) % 3;
     const nextUrl = (count + 1) % urls.length;
@@ -35,11 +35,18 @@
     backdrops = backdrops;
   }
 
+  function handleKeydown(e) {
+    if (e.key === "ArrowRight" ) advanceSlide();
+  }
+
 </script>
 
+<!-- Backdrop Slideshow -->
 {#each backdrops as backdrop, i}
 <div class="backdrop" class:show={count%3 === i} style="background-image: url({path+backdrop})"></div>
 {/each}
+
+<svelte:window on:keydown={handleKeydown}/>
 
 <Navbar />
 <div class="views-container">
