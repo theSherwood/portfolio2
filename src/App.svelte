@@ -2,7 +2,7 @@
   import {Router, Route} from 'svero'
   import {onMount} from 'svelte'
   import {fade, fly} from 'svelte/transition'
-  
+
   import Navbar from './layout/Navbar.svelte';
   import Home from './views/Home.svelte';
   import CV from './views/CV.svelte'
@@ -10,20 +10,37 @@
   import Projects from './views/Projects.svelte'
   import ProjectWrapper from './views/ProjectWrapper.svelte'
 
-  let showBackdrop = false;
-  let animate = false;
+  let path = '/images/'
+
+  let urls = "test3.jpg milkyway3.jpg test1.jpg test2.jpg milkyway.jpg".split(' ');
+
+  let backdrops = [urls[0], urls[1], urls[2]];
+
+  let count = -1;
   onMount(() => {
-    showBackdrop = true;
     setTimeout(() => {
-      animate = true;
-    }, 50);
+      count++;
+    }, 50)
+    setInterval(() => {
+      toggleAnimate()
+    }, 7000)
   })
+
+  function toggleAnimate() {
+    count++
+    const nextBackdrop = (count + 1) % 3;
+    const nextUrl = (count + 1) % urls.length;
+    backdrops[nextBackdrop] = urls[nextUrl];
+    // Force reactivity
+    backdrops = backdrops;
+  }
 
 </script>
 
-{#if showBackdrop}
-<div in:fade="{{duration: 3000}}" class="backdrop" class:animate></div>
-{/if}
+{#each backdrops as backdrop, i}
+<div class="backdrop" class:show={count%3 === i} style="background-image: url({path+backdrop})"></div>
+{/each}
+
 <Navbar />
 <div class="views-container">
   <Router>
@@ -39,16 +56,16 @@
 
 <style>
   .backdrop {
-    filter: grayscale(1) contrast(110%) brightness(120%);
     position: fixed;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url("/images/milkyway2.jpg" );
     background-size: cover;
     background-position: 50% 40%;
     z-index: -10;
+    opacity: 0;
+    transition: opacity 3000ms ease-in;
   }
 
   .backdrop::after {
@@ -66,8 +83,8 @@
     padding: 0;
   }
 
-  /* .animate {
-    transform: translateY(50%);
-  } */
+  .show {
+    opacity: 1;
+  }
 </style>
 
