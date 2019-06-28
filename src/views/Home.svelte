@@ -45,13 +45,13 @@
 
 <style>
   .title {
-    font-family: futura-pt, Helvetica, Arial, sans-serif;
     letter-spacing: 0.6em;
+    font-family: "Helvetica Neue", sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
     margin: 0;
-    line-height: 0;
     margin-left: 1em;
+    color: white;
   }
 
   .title-container {
@@ -62,17 +62,17 @@
   }
 
   .hrow {
-    margin-top: 1em;
-    margin-bottom: 1.7em;
-    border-top: solid 3em rgba(255, 255, 255, 1);
+    border-top: solid 4em rgba(255, 255, 255, 1);
     transform: scale(0);
     transform-origin: left;
+    margin-top: -2em;
+    margin-bottom: -2em;
   }
 
   .hrow.mounted {
     transform: scale(1);
     transition: transform 1000ms ease-out, border-color 1000ms ease-out;
-    border-top: solid 3em rgba(255, 255, 255, 0.1);
+    border-top: solid 4em rgba(255, 255, 255, 0.1);
   }
 
   @media only screen and (max-width: 650px) {
