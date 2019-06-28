@@ -1,0 +1,4 @@
+<h3>How I Got Here</h3>
+    <p>
+      My first real encounter with programming was for a sculpture.
+    </p>
