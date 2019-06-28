@@ -1,35 +1,42 @@
 <script>
   import { onMount } from "svelte";
-  import { fly } from "svelte/transition";
+  import { fly, fade } from "svelte/transition";
 
   import { route } from "../stores/route";
+  import { pageTransition } from "../stores/pageTransition";
+
   export let router = {};
   route.set(router.route.path);
 
   let mounted = false;
+
   onMount(() => {
     setTimeout(() => {
       mounted = true;
     }, 1000);
   });
+
+  $: if ($pageTransition) {
+    mounted = false;
+  }
 </script>
 
 <div class="title-container">
   {#if mounted}
   <h1
-    class="title top"
-    class:mounted
+    class="title"
     in:fly="{{ y: -10, duration: 750, delay: 1000 }}"
+    out:fly="{{ x: -80, duration: 200 }}"
   >
     Adam
   </h1>
   {/if}
-  <hr class="hrow" class:mounted />
+  <hr class="hrow" class:mounted out:fly="{{ x: -80, duration: 200 }}" />
   {#if mounted}
   <h1
-    class="title bottom"
-    class:mounted
+    class="title"
     in:fly="{{ y: 10, duration: 750, delay: 1000 }}"
+    out:fly="{{ x: -80, duration: 200 }}"
   >
     Sherwood
   </h1>
@@ -58,14 +65,13 @@
     margin-top: 1em;
     margin-bottom: 1.7em;
     border-top: solid 3em rgba(255, 255, 255, 1);
-    transform: scaleX(0);
-    transition: transform 1000ms ease-out, border-color 1000ms ease-out;
+    transform: scale(0);
     transform-origin: left;
-    border-right: solid 7em transparent;
   }
 
   .hrow.mounted {
-    transform: scaleX(1);
+    transform: scale(1);
+    transition: transform 1000ms ease-out, border-color 1000ms ease-out;
     border-top: solid 3em rgba(255, 255, 255, 0.1);
   }
 
