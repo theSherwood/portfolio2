@@ -12,7 +12,7 @@
 
   let path = '/images/'
 
-  let urls = "test3.jpg milkyway3.jpg test1.jpg test2.jpg milkyway.jpg".split(' ');
+  let urls = "nebula1.jpg milkyway.jpg nebula3.jpg stars1.jpg crab.jpg stars3.jpg nebula2.jpg stars4.jpg jupiter.jpg stars2.jpg sun.jpg stars5.jpg eastcoast.jpg".split(' ');
 
   let backdrops = [urls[0], urls[1], urls[2]];
 
