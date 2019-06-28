@@ -48,7 +48,7 @@
       <button>
         <span>
           <span class="svg-wrapper">
-            <span>Process</span>
+            <span>Learn More</span>
           </span>
         </span>
       </button>
@@ -141,12 +141,15 @@
     background: transparent;
     border-radius: 0px;
     color: var(--contrast-color);
-    transition: box-shadow 500ms ease-in-out, color 500ms ease-in-out;
-    box-shadow: inset -30px 0px -30px var(--contrast-color);
+    /* transition: box-shadow 500ms ease-in-out, color 500ms ease-in-out;
+    box-shadow: inset -30px 0px -30px var(--contrast-color); */
+    transition: border-color 1000ms ease-in;
+    border: solid 1px transparent;
   }
 
   button:hover {
-    box-shadow: inset 0 -20px 50px 0px var(--contrast-color);
-    color: var(--active-color);
+    /* box-shadow: inset 0 -20px 50px 0px var(--contrast-color);
+    color: var(--active-color); */
+    border: solid 1px var(--contrast-color);
   }
 </style>
