@@ -1,5 +1,9 @@
 "use strict";
 
+/*
+  Taken from https://codepen.io/chriscoyier/project/editor/ZPvNRA
+*/
+
 console.log("WORKER: executing.");
 
 /* A version number is useful when updating the worker logic,
