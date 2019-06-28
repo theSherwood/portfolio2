@@ -13,7 +13,7 @@
   onMount(() => {
     setTimeout(() => {
       mounted = true;
-    }, 1000);
+    }, 300);
   });
 
   $: if ($pageTransition) {
