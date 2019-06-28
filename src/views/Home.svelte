@@ -44,6 +44,7 @@
     font-weight: lighter;
     margin: 0;
     line-height: 0;
+    margin-left: 1em;
   }
 
   .title-container {
@@ -85,6 +86,7 @@
 
     .title {
       font-size: 3em;
+      margin-left: 0.5em;
     }
   }
 
