@@ -2,6 +2,11 @@
   import { Router, Route } from "svero";
   import { onMount } from "svelte";
   import { fly } from "svelte/transition";
+
+  import Future from './bioSections/Future.svx'
+  import Past from './bioSections/Past.svx'
+  import Present from './bioSections/Present.svx'
+
   import { pageTransition } from "../stores/pageTransition";
   import { route } from "../stores/route";
   export let router = {};
@@ -17,17 +22,16 @@
 </script>
 
 {#if render}
-<main in:fly="{{ y: 80, duration: 400}}" out:fly="{{ y: 80, duration: 200}}">
-  <h3>Where I Am</h3>
-    <p>
-      Husband and father of two girls. I'm a U.S. citizen currently living in the U.K. while finishing up my masters at the Royal College of Art (I'll be done in a couple of weeks; then we'll be moving back to the states).
-    </p>
-  <h3>How I Got Here</h3>
-    <p>My first real encounter with programming was for an artwork. </p>
-  <h3>Where I'm Headed</h3>
-    <p>
-      We'll be moving back to the U.S. in the next few months. The short term goal is to have a good job to move back to.
-    </p>
+<main out:fly="{{ y: 80, duration: 200}}">
+  <section in:fly="{{ x: -80, duration: 400, delay: 0 }}">
+    <Present />
+  </section>
+  <section in:fly="{{ x: -80, duration: 400, delay: 200 }}">
+    <Past />
+  </section>
+  <section in:fly="{{ x: -80, duration: 400, delay: 400 }}">
+    <Future />
+  </section>
 </main>
 {/if}
 
@@ -35,11 +39,17 @@
   main {
     max-width: 800px;
     margin: auto;
-    padding: 8px;
+
     position: relative;
   }
 
-  main::before {
+  section {
+    position: relative;
+    margin-bottom: 1em;
+    padding: 1em;
+  }
+
+  section::before {
     content: "";
     position: absolute;
     top: 0;
