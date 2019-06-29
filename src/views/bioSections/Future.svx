@@ -1,5 +1,22 @@
-<h3>Where I'm Headed</h3>
-    <p>
-      We'll be moving back to the U.S. in the next few months. The short term
-      goal is to have a good job to move back to.
-    </p>
+### Where I'm Headed
+
+#### Job Interests
+
+We'll be moving back to the U.S. in the next few months. The short-term goal is to have a good job to move back to. The web is an awesome place to be and not just because of how many jobs there are, but because the problems associated with the interconnectivity of the species are fascinating. I want a better web, and long-term, that's the class of problems I want to work to solve.
+
+#### Research
+
+WebAssembly looks like it could prove to be an inflection point of sorts in the development of the web. It also creates a bridge between systems programming and web development, which holds great appeal. So in the near future, Rust is on my study list, as well as a some C to get a better grasp of the problems that Rust is attempting to be solving.
+
+CPU improvements are stalling; parallelization and functional programming seem likely to become critical in the future. The importance of functional programming may be further amplified by cloud computing and the IoT. Given Elm's proximity to Javascript, it seems a good place to start.
+
+I've also been mesmerized by the little bit of LISP I've played with. The simplicity of the structure appears to make LISP potentially the most powerful language I've seen. It deserves more attention. Hoon has a similar structure (though supposedly discovered independently) and manages to escape the jungle of parantheses that sprout up wherever LISP treads.
+
+#### ILOW
+
+All this research is for something. In addition to the things I'll build along the way, the ultimate goal is to have the tools necessary to design the ILOW. The Ideal Language Of the Web. The successor to Javascript, but built conscious of the lessons of the past 15 years. That sounds like a lofty goal, but why not aim high? 
+
+
+
+
+
