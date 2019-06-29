@@ -10,16 +10,6 @@ const projects = [
     info: "regexxp"
   },
   {
-    title: "Bibliostack",
-    image: "none",
-    blurb: "MERN stack app that makes shopping for a stack of books a breeze",
-    links: {
-      website: "https://www.bibliostack.com",
-      github: "https://github.com/theSherwood/Bibliostack"
-    },
-    info: "bibliostack"
-  },
-  {
     title: "Mentat",
     image: "none",
     blurb:
@@ -41,6 +31,16 @@ const projects = [
     info: "reconjs"
   },
   {
+    title: "Bibliostack",
+    image: "none",
+    blurb: "MERN stack app that makes shopping for a stack of books a breeze",
+    links: {
+      website: "https://www.bibliostack.com",
+      github: "https://github.com/theSherwood/Bibliostack"
+    },
+    info: "bibliostack"
+  },
+  {
     title: "ReconJS Site",
     image: "none",
     blurb: "Nextjs app that gamifies ReconJS in order to improve its security",
@@ -51,10 +51,12 @@ const projects = [
     info: "reconjs-site"
   },
   {
-    title: "this site",
+    title: "this website",
     image: "none",
-    blurb: "A portfolio site built with svelte 3",
-    links: {},
+    blurb: "A portfolio site built with Svelte3",
+    links: {
+      github: "https://github.com/theSherwood/portfolio2"
+    },
     info: "portfolio"
   }
 ];
