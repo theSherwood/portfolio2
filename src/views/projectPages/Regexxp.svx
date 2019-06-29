@@ -1,4 +1,18 @@
-### RegexXp
+```js exec
+  import ELink from './links/ELink.svelte';
+  import projects from '../../data/projects.js';
+  import GithubIcon from '../../components/GithubIcon.svelte';
+  import GlobeIcon from '../../components/GlobeIcon.svelte';
+
+  const project = projects.filter(project => project.info === 'regexxp')[0]
+
+  const {links} = project;
+```
+
+### RegexXP
+
+<ELink href="{links.website}" title="RegexXP.online"><span style="margin: .5em;"><GlobeIcon size="2em"/></span></ELink>
+<ELink href="{links.github}" title="GitHub"><span style="margin: .5em;"><GithubIcon size="2em"/></span></ELink>
 
 #### Description
 	
