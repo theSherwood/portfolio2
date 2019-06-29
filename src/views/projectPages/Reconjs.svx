@@ -1,3 +1,7 @@
+```js exec
+  import TiddlyWiki from './links/TiddlyWiki.svelte';
+```
+
 ### ReconJS
 	
 #### Description
@@ -19,7 +23,7 @@ ReconJS is published on npm.
 	
 #### Overview
 
-I originally tried building this project from absolute scratch. I wanted to make the package. as small as possible to make it easy to throw into web apps like [TiddlyWiki](https://tiddlywiki.com) where users have opportunities to run arbitrary foreign code.
+I originally tried building this project from absolute scratch. I wanted to make the package. as small as possible to make it easy to throw into web apps like <TiddlyWiki /> where users have opportunities to run arbitrary foreign code.
 	
 That meant building my own parser and tokenizer. I thought that I would not need all the data of a full-blown abstract syntax tree.
 	
