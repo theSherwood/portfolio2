@@ -44,7 +44,7 @@ This was my first solo project using basically any of these technologies. React 
 - **CSS Frameworks**	
     - Introducing a CSS framework from the beginning may be a mistake.
 - **Research**	
-    - Do better research. There are some great websites for learning regular expressions already, in particular [Regex101](https://regex101.com). There are also already ways to highlight text in a textarea. Use those solutions instead of building your own.
+    - Do better research. There are some great websites for learning regular expressions already, in particular <a href="https://regex101.com" target="_blank" rel="noopener noreferrer">Regex101</a> There are also already ways to highlight text in a textarea. Use those solutions instead of building your own.
 	
 #### To Do
 	
