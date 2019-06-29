@@ -45,7 +45,7 @@
   main {
     max-width: 800px;
     margin: auto;
-    padding: 8px;
+    padding: 1em;
     position: relative;
   }
 
