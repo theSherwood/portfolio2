@@ -16,7 +16,6 @@
   </head>
 
   <body>
-    <script src="/bundle.js"></script>
     <script>
       // ServiceWorker is a progressive technology. Ignore unsupported browsers
       if ("serviceWorker" in navigator) {
@@ -33,5 +32,6 @@
         console.log("CLIENT: service worker is not supported.");
       }
     </script>
+    <script src="/bundle.js"></script>
   </body>
 </html>
