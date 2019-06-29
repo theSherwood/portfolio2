@@ -1,1 +1,56 @@
-### Portfolio
+```js exec
+  import ELink from './links/ELink.svelte';
+  import projects from '../../data/projects.js';
+  import GithubIcon from '../../components/GithubIcon.svelte';
+  import GlobeIcon from '../../components/GlobeIcon.svelte';
+
+  const project = projects.filter(project => project.info === 'portfolio')[0]
+
+  const {links} = project;
+```
+
+### this website
+
+<ELink href="{links.github}" title="GitHub"><span style="margin: .5em;"><GithubIcon size="2em"/></span></ELink>
+	
+#### Description
+	
+A simple website portfolio SPA to curate a few of my projects.
+	
+#### Notable Tech Used
+	
+- **Svelte3** - compile-time UI framework
+- **Skeleton** - minimal CSS framework
+- **Rollup** - bundling
+- **Now** - serverless deployment
+	
+#### Overview
+
+I'd played with Svelte3 a little bit and wanted to make a simple project with it. I also wanted to flex my design skills a bit. I've been so focused on the code, generally speaking, that I haven't done much of anything about design. This was an opportunity to give design a little bit of thought. I wanted to make something minimal yet rich, and I'd like to think I've done that.
+
+#### Smooth Sailing
+	
+Things have been reasonably smooth. Svelte is pretty ergonomic, Skeleton is minimal and went largely unused, and I've used Rollup and Now with previous projects. Svelte's built-in store system makes global state management stupidly easy. Svelte also makes simple transition animations much easier than is possible in React. I have to say, on the whole, I'm a fan.
+	
+#### Pain Points
+	
+- **Design**
+    - Design. Should. Be. Done. Prior. To. Code. The design turned out nice, but the process was slower than it should have been. I really need to separate design and programming into two separate steps.  
+- **Service Worker**
+    - I've got a number of images in the backdrop, and it made sense to set up a service worker, at least for that. This was my first attempt at using a service worker, and it wasn't wholly pleasant. Debugging in particular, is a pain. No doubt, I'll get more comfortable with it.
+- **Goodbye JSX**
+    - I like JSX. JSX allows you to do somethings with ease that are simply more difficult with Svelte. JSX also feels intuitive in a way that Svelte does not. So there's been a bit of a learning curve. But there is no doubt that Svelte is cleaner, and that is worth a lot.
+- **Tooling**
+    - The tooling around Svelte is not great yet. Syntax highlighting and formatting are pretty hit and miss, mostly miss.
+
+#### Lessons Learned
+	
+- **Scoped CSS**
+    - Scoped CSS is still wonderful.
+- **Svelte**
+    - I simply prefer Svelte to React at this point. The ecosystem is not as big, but Svelte feels lightweight and fast (at least compared with React). The Hooks API has made React a lot cleaner, but it still doesn't compare with Svelte in that regard.
+	
+#### To Do
+	
+SSR with Sapper. SPA with Svelte is all well and good, but some SSR is in order. 
+
