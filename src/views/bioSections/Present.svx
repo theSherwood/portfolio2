@@ -1,6 +1,3 @@
-<h3>Where I Am</h3>
-    <p>
-      Husband and father of two girls. I'm a U.S. citizen currently living in
-      the U.K. while finishing up my masters at the Royal College of Art (I'll
-      be done in a couple of weeks; then we'll be moving back to the states).
-    </p>
+### Where I Am
+
+I'm a husband and a father. I'm also a US citizen currently living in the UK while finishing up my masters at the Royal College of Art. I'll be graduating in a couple of weeks, just in time for a career change! While art has helped shaped me, programming and the web have beguiled me. I'm currently searching for a programming job in the US to move back to in the next few months. If you're looking to hire, get in touch!
