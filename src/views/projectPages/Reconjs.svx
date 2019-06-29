@@ -12,7 +12,7 @@
 
 ### ReconJS
 
-<ELink href="http://reconjs-site.thesherwood.now.sh/" title="Demo"><span style="margin: .5em;"><GlobeIcon size="2em"/></span></ELink>
+<ELink href="http://reconjs-site.thesherwood.now.sh/" title="Adversarial Demo"><span style="margin: .5em;"><GlobeIcon size="2em"/></span></ELink>
 <ELink href="{links.github}" title="GitHub"><span style="margin: .5em;"><GithubIcon size="2em"/></span></ELink>
 	
 #### Description
@@ -23,7 +23,7 @@ All of us use code we didn't write. Whether we're using a plugin, running arbitr
 	
 ReconJS was written to help. It flags code that uses potentially unsafe identifiers and returns the line and column numbers of offending code. You can also configure Recon to allow access to keywords you want to be available.
 	
-ReconJS is published on npm.
+ReconJS is available on <ELink href="https://www.npmjs.com/package/@thesherwood/reconjs" title="npm">npm</ELink>. An adversarial <ELink href="http://reconjs-site.thesherwood.now.sh/" title="demo">demo</ELink> is also available. 
 	
 #### Notable Tech Used
 	
@@ -34,7 +34,7 @@ ReconJS is published on npm.
 	
 #### Overview
 
-I originally tried building this project from absolute scratch. I wanted to make the package. as small as possible to make it easy to throw into web apps like <TiddlyWiki /> where users have opportunities to run arbitrary foreign code.
+I originally tried building this project from absolute scratch. I wanted to make the package as small as possible to make it easy to throw into web apps like <TiddlyWiki /> where users have opportunities to run arbitrary foreign code.
 	
 That meant building my own parser and tokenizer. I thought that I would not need all the data of a full-blown abstract syntax tree.
 	
@@ -56,10 +56,12 @@ Once I had Acorn building the AST, it was pretty straightforward. Prior to that,
 #### Lessons Learned
 	
 - **Complexity**
-    - Some kinds of complex systems can be developed stochastically. Parsing is not one of these. If a system needs to be cohesively designed rather than ad hoc and evolved, you must be teleological about it.
+    - Some kinds of complex systems can be developed stochastically. Parsing is not one of these. If a system needs to be cohesively designed rather than ad hoc and evolved, you must be teleological about design.
 	
 #### To Do
 	
 Support for ES7+.
 
 Using ReconJS to check files, as a command line tool, rather than using it programmatically and passing in strings of code.
+
+Add tests.
