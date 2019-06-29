@@ -21,12 +21,12 @@ The ReconJS Site is a gamified, adversarial demo of <ELink href="https://github.
 1. Give developers an easy way to experiment with ReconJS' capabilities
 1. Test ReconJS against developers trying to break it, and obtain the code responsible for successful breaches
 
-The gamification of testing my security software seemed like a fun idea. So the UI of the site is reminiscent of arcade games. Those who attempt the game must change the value of `window.target` in order to beat the game and add their names to the highscores.
+The gamification of testing my security software seemed like a fun idea. So the UI of the site is reminiscent of arcade games. Those who attempt the game must change the value of window.target in order to beat the game and add their names to the highscores.
 	
 #### Notable Tech Used
 	
 - **React** - UI framework
-- **NextJS** - SSR
+- **Next** - SSR
 - **Express** - routing
 - **Node** - lambdas
 - **Mongoose** - ODM
@@ -35,22 +35,28 @@ The gamification of testing my security software seemed like a fun idea. So the 
 	
 #### Overview
 
-I originally ...
+The goal was to gamify improving my ReconJS security package by creating a convenient way for other developers to try to beat it. Integrating my own little library into an app (even just a simple demo app) was a lot of fun.
 
 #### Smooth Sailing
 	
-Once I had Acorn building the AST, it was pretty straightforward. Prior to that, writing lots of tests kept the project manageable for quite some time (until I hit scope). 
+Most of these technologies I had used before. So it wasn't tremendously difficult. The only exception is Next for SSR. That was new, but on the whole really enjoyable. Next actually reduces the amount of boilerplate that a typical React application would require. The built-in scoped CSS system of Next is also eminently sensible. After using scoped CSS with Next and with Svelte3 (on another project) I'm starting to think that scoped CSS is the way to go.
 	
 #### Pain Points
 	
-- **Scope*
-    - Scope ...
+- **SSR and CodeMirror**
+    - This one was a bit tricky. I used `react-codemirror2` in this website, and it kept throwing errors when rendered server-side. I searched for a solution but ultimately decided simply to prevent it rendering server-side. After that, I discovered some information about server-side rendering CodeMirror in the CodeMirror docs. I have yet to update the site, however.
+- **@zeit/next-css**
+    - Next has a nasty little bug when it comes to external stylesheets, which I needed for the CodeMirror editor. They throw import errors. I found a little hack in which you import and empty stylesheet into the _app.js page. For some reason this works. I have no idea why, which bothers me, but this is a known bug that's got a lot of folks looking for a solution already.
+- **Database Security**
+    - The backend API is public. So the question arose, how do I keep the database from getting overrun by pranksters/hackers. I did a lot of research, but ultimately settled on a dead simply solution. I'm only going to be able to digest at most a handful of successful breaches of ReconJS in a day. So I simply put a global rate limit on writing to the database. And there is no RESTful endpoint for GET requests other than the one for the list of 'highscores'. So the amount of damage a determined hacker could do seems minimal, to say the least.
 
 #### Lessons Learned
 	
-- **Complexity**
-    - Some kinds ...
+- **Scoped CSS**
+    - Scoped CSS is wonderful. It makes styling components a breeze and still provides an easy way to override interior element styling from outside without dialing up CSS specificity to an insane degree. Also, it's just writing css, which feels a lot nicer than CSS-in-JS. I would like to see an atomic design system that used scoped CSS. I'm curious whether that would be more convenient than some of the other alternatives.
+- **SSR**
+    - SSR with Next is a better dev experience than with SPA with CRA, for example. And if SEO and performance are also improved, so much the better! Next time I need to do something in React, I'm headed straight to Next. The folks behind Next have done an extraordinary job. Other than a bug or two, the dev experience is grand.
 	
 #### To Do
 	
-
+Consider a freeform section where developers can play with configuring ReconJS itself, rather than simply trying to beat it. Though this may belong in another demo. I'm not sure. This website feels adequate to its purpose.
