@@ -1,4 +1,16 @@
-<h3>How I Got Here</h3>
-    <p>
-      My first real encounter with programming was for a sculpture.
-    </p>
+### How I Got Here
+
+#### Mud Intelligence
+
+My first real encounter with programming was for a sculpture in the first semester of my masters degree. It was essentially a logic circuit stamped into clay and operated by placing beads where symbols indicated, given the configuration of stamps and their state(indicated by beads). The program/circuit was a tic-tac-toe player which I would operate in its play against a human participant. Sometimes I taught a viewer to operate it so that it was clear that I wan't playing on behalf of the computer. It was jarring for a number of people to be beaten at tic-tac-toe by an information architecture constructed of beads and clay tablets.
+
+Of course, for those familiar with programming, the substrate of a function is only important in terms of efficiency. A computation performed with beads and clay is equivalent to a computation performed with electrons and transistors (only about a billion times slower). But it is easy to forget how incredible computation is when we implement it with electronics (something we don't instictively understand). Beads and clay, on the other hand, we get down in our gut. We know intuitively how objects like that behave. So to see an 'AI' built in the substrate of beads and clay consistently outmanuever its human opponents is something of a shock (even on a task as trivial as tic-tac-toe).
+
+The most thrilling part, though, was designing the logic of the system. I developed a notation (really a domain-specific programming language) for describing the ternary logic of a tic-tac-toe engine. Then, because less logic circuitry implies a faster runtime, I refactored and compressed and compressed to make the logic circuitry as small as I could. And I was hooked.
+
+#### Deep Dive
+
+After that, I dove head first into Python. I took online courses through MIT open courseware, EdX, Coursera, and Udemy; learning data structures and algorithms, data science, and even a little machine learning. I grappled with PIP, SQL, and NLP; and eventually started messing around with Flask and Django for web development.
+
+That, in turn, lead me to Javascript and Javascript's unfathomably rich ecosystem, where I've been exploring and building ever since.
+
