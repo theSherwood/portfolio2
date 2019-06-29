@@ -39,7 +39,6 @@
   main {
     max-width: 800px;
     margin: auto;
-
     position: relative;
   }
 
