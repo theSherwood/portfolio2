@@ -1,14 +1,13 @@
 <script>
-  export let width = "1em";
-  export let height = "1em";
+  export let size = "1em";
 </script>
 
 <svg
   class="github-icon"
   fill="currentColor"
   xmlns="http://www.w3.org/2000/svg"
-  width="{width}"
-  height="{height}"
+  width="{size}"
+  height="{size}"
   viewBox="0 0 16 16"
   fill-rule="evenodd"
   clip-rule="evenodd"

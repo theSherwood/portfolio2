@@ -1,12 +1,11 @@
 <script>
-  export let width = "1em";
-  export let height = "1em";
+  export let size = "1em";
 </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  width="{width}"
-  height="{height}"
+  width="{size}"
+  height="{size}"
   viewBox="0 0 24 24"
   fill="none"
   stroke="currentColor"
