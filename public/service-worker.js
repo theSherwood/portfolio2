@@ -91,6 +91,17 @@ self.addEventListener("fetch", function(event) {
            Read more:
            https://ponyfoo.com/articles/progressive-networking-serviceworker
         */
+
+        const exclude = /\.jpg\b/;
+        if (exclude.test(event.request.url)) {
+          console.log(
+            "WORKER: fetch event",
+            cached ? "(cached)" : "(network)",
+            event.request.url
+          );
+          return cached;
+        }
+
         var networked = fetch(event.request)
           // We handle the network request with success and failure scenarios.
           .then(fetchedFromNetwork, unableToResolve)
