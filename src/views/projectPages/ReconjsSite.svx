@@ -1,2 +1,56 @@
+```js exec
+  import ELink from './links/ELink.svelte';
+  import projects from '../../data/projects.js';
+  import GithubIcon from '../../components/GithubIcon.svelte';
+  import GlobeIcon from '../../components/GlobeIcon.svelte';
+
+  const project = projects.filter(project => project.info === 'reconjs-site')[0]
+
+  const {links} = project;
+```
+
 ### ReconJS Site
+
+<ELink href="{links.website}" title="ReconJS Site"><span style="margin: .5em;"><GlobeIcon size="2em"/></span></ELink>
+<ELink href="{links.github}" title="GitHub"><span style="margin: .5em;"><GithubIcon size="2em"/></span></ELink>
+	
+#### Description
+	
+The ReconJS Site is a gamified, adversarial demo of <ELink href="https://github.com/theSherwood/ReconJS" title="ReconJS GitHub">ReconJS</ELink>. The purpose is two-fold:
+
+1. Give developers an easy way to experiment with ReconJS' capabilities
+1. Test ReconJS against developers trying to break it, and obtain the code responsible for successful breaches
+
+The gamification of testing my security software seemed like a fun idea. So the UI of the site is reminiscent of arcade games. Those who attempt the game must change the value of `window.target` in order to beat the game and add their names to the highscores.
+	
+#### Notable Tech Used
+	
+- **React** - UI framework
+- **NextJS** - SSR
+- **Express** - routing
+- **Node** - lambdas
+- **Mongoose** - ODM
+- **MongoDB** - database
+- **Now** - serverless deployment
+	
+#### Overview
+
+I originally ...
+
+#### Smooth Sailing
+	
+Once I had Acorn building the AST, it was pretty straightforward. Prior to that, writing lots of tests kept the project manageable for quite some time (until I hit scope). 
+	
+#### Pain Points
+	
+- **Scope*
+    - Scope ...
+
+#### Lessons Learned
+	
+- **Complexity**
+    - Some kinds ...
+	
+#### To Do
+	
 
