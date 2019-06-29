@@ -1,27 +1,31 @@
+```js exec
+  import TiddlyWiki from "./links/TiddlyWiki.svelte";
+```
+
 ### Mentat
 	
 #### Description
 	
-Mentat is actually a series of 4 plugins (Repopup, Volant, Engine, and Mentat) for the [TiddlyWiki](https://tiddlywiki.com/) platform. Each plugin builds on the last. Together, they create a platform for users to radically configure the UI of their wiki intuitively and with speed. They also form a base from which even more adventurous UI solutions can be developed.
+Mentat is actually a series of 4 plugins (Repopup, Volant, Engine, and Mentat) for the <TiddlyWiki /> platform. Each plugin builds on the last. Together, they create a platform for users to radically configure the UI/UX of their wiki intuitively and with speed. They also form a base from which even more adventurous UI/UX solutions can be developed.
 	
-- **Repopup** handles popups and popovers native to TiddlyWiki to make them compatible with the other 3 plugins.
-- **Volant** allows a user to add a tag to a tiddler (the basic atomic building block of TiddlyWiki) that makes the tiddler positionable through dragging and dropping. Tags of the user's choosing can also be imbued with the same power. Volant also has a convenient snapping system built in.
+- **Repopup** handles popups and popovers native to <TiddlyWiki /> to make them compatible with the other 3 plugins.
+- **Volant** allows a user to add a tag to a tiddler (the basic atomic building block of <TiddlyWiki />) that makes the tiddler positionable through dragging and dropping. Tags of the user's choosing can also be imbued with the same power. Volant also has a convenient snapping system built in.
 - **Engine** uses Volant tiddlers to create a highly configurable heads up display. Taskbars, menu bars, side bars of the user's choosing and design can quickly snap into place. It comes with some useful defaults.
 - **Mentat** brings it all together, adding positionable windows with scrolling tab bars, and powerful navigation between different window instances. Save layouts, window sessions, or entire multi-window sessions for later.
 
 #### Notable Tech Used
 	
-Tiddlywiki is it's own beast. It's built in vanilla Javascript, HTML, and CSS, and additionally employs a TiddlyWiki markup, macro, and widget system not found anywhere else.
+Tiddlywiki is it's own beast. It's built in vanilla Javascript, HTML, and CSS, and additionally employs a <TiddlyWiki /> markup, macro, and widget system not found anywhere else.
 	
 #### Overview
 	
 This was my first real project in Javascript, and is, to this date, the most difficult project I've taken on and probably still the one I'm most proud of.
 	
-[TiddlyWiki](https://tiddlywiki.com/) is spectacular. It is a quine, and one interacts with one's wiki by editing the source code, making TiddlyWiki probably the most user configurable anything I've ever encountered. In many respects, it is more like an operating system than an wiki or an app (but the way data is organized is far more powerful than any operating system I've ever encountered). I could wax lyrical about it, but suffice it to say that it is really something special. 
+<TiddlyWiki /> is spectacular. It is a quine, and one interacts with one's wiki by editing the source code, making <TiddlyWiki /> probably the most user configurable anything I've ever encountered. In many respects, it is more like an operating system than an wiki or an app (but the way data is organized is far more powerful than any operating system I've ever encountered). I could wax lyrical about it, but suffice it to say that it is really something special. 
 	
-TiddlyWiki comes with a number of tools for making configuration easier. But there were not many of these tools or abstractions for the UI. Mentat is an ambitious attempt to change that. It not only adds a jumping off point and a set of abstractions for future TiddlyWiki UI developers, but it provides something immediately useful to the user. To do this, I decided to use abstractions and interactions that are already familiar to most users: taskbars and windows. But that's just the beginning.
+<TiddlyWiki /> comes with a number of tools for making configuration easier. But there were not many of these tools or abstractions for the UI/UX. Mentat is an ambitious attempt to change that. It not only adds a jumping off point and a set of abstractions for future <TiddlyWiki /> UI/UX developers, but it provides something immediately useful to the user. To do this, I decided to use abstractions and interactions that are already familiar to most users: taskbars and windows. But that's just the beginning.
 
-Do not be fooled by the spartan appearance, TiddlyWiki is intended to be largely unopinioted on styling issues.
+Do not be fooled by the spartan appearance, <TiddlyWiki /> is intended to be largely unopinioted on styling issues.
 
 #### Smooth Sailing
 	
@@ -29,25 +33,25 @@ There was no smooth sailing.
 	
 #### Pain Points
 	
-- **TiddlyWiki's Abstractions**
-    - [TiddlyWiki](https://tiddlywiki.com/) is awesome, but the abstractions were unfamiliar. The existing TiddlyWiki codebase was also something like 25,000 lines at the time (formidable for a newbie like me), sitting in a single HTML file. Additionally, TiddlyWiki has it's own component system, it's own widgets, it's own markup, it's own macro system, etc. I had to grapple with all these new things while getting a handle on basic Javascript.
+- **<TiddlyWiki />'s Abstractions**
+    - <TiddlyWiki /> is awesome, but the abstractions were unfamiliar. The existing <TiddlyWiki /> codebase was also something like 25,000 lines at the time (formidable for a newbie like me), sitting in a single HTML file. Additionally, <TiddlyWiki /> has it's own component system, it's own widgets, it's own markup, it's own macro system, etc. I had to grapple with all these new things while getting a handle on basic Javascript.
 - **Configurability**	
-    - [TiddlyWiki](https://tiddlywiki.com/) is a quine which users manipulate by editing the source code from within the wiki. So everything has to be highly robust while being configurable as possible because users may be poking at it routinely. So Mentat had to be not only maintainable for developers, given future changes to the TiddlyWiki core, but robust enough to be configured in ways I couldn't anticipate. It had to be a tool while also being something that users could immediately and intuitively make use of. That was a huge challenge.
+    - <TiddlyWiki /> is a quine which users manipulate by editing the source code from within the wiki. So everything has to be highly robust while being configurable as possible because users may be poking at it routinely. So Mentat had to be not only maintainable for developers, given future changes to the <TiddlyWiki /> core, but robust enough to be configured in ways I couldn't anticipate. It had to be a tool while also being something that users could immediately and intuitively make use of. That was a huge challenge.
 - **User Feedback**
-    - Upon release, Mentat began to be used. I had naively thought that at release, the work was done. In hindsight, that was stupid. On release is when the bug reports, support and feature requests began rolling in (Github does not reflect this as the vast majority of this stuff occurred in the TiddlyWiki Google group). I could never have anticipated the ways some people were trying to use my plugins. Some feature requests I was able to implement and some were simply too far outside the scope of the project. 
+    - Upon release, Mentat began to be used. I had naively thought that at release, the work was done. In hindsight, that was stupid. On release is when the bug reports, support and feature requests began rolling in (Github does not reflect this as the vast majority of this stuff occurred in the <TiddlyWiki /> Google group). I could never have anticipated the ways some people were trying to use my plugins. Some feature requests I was able to implement and some were simply too far outside the scope of the project. 
 
 #### Lessons Learned
 	
 - **Release**
-    - Release is when the work really begins. You also can't make a tool or interface right for literally everyone. TiddlyWiki's philosophy is to offer extensive configurability, but the philosophy of doing things one right way also has a great deal of merit.
+    - Release is when the work really begins. You also can't make a tool or interface right for literally everyone. <TiddlyWiki />'s philosophy is to offer extensive configurability, but the philosophy of doing things one right way also has a great deal of merit.
 - **Code Base**
-    - Know the code base. You can't learn it all immediately, but learn it bit by bit. Mentat and TiddlyWiki taught me how to do that.
+    - Know the code base. You can't learn it all immediately, but learn it bit by bit. Mentat and <TiddlyWiki /> taught me how to do that.
 - **Go Big**
-    - Mentat was a really ambitious project for someone of my experience. And I still think it was probably the biggest upgrade to UI functionality that TiddlyWiki has seen. It was really difficult, but it paid off. 
+    - Mentat was a really ambitious project for someone of my experience. And I still think it was probably the biggest upgrade to UI/UX functionality that <TiddlyWiki /> has seen. It was really difficult, but it paid off. 
 - **Make Something You Want to Use**
     - Sometimes this isn't possible, but when it is, this is the way to go!
 - **Respect the Weird**
-    - TiddlyWiki has a weird set of abstractions not seen outside it. That makes it something of a pain to work on. Weird projects merit some respect in that regard: they will not be easy. On the other hand, weird projects sometimes blaze new trails, and that is an awesome thing to be a part of.
+    - <TiddlyWiki /> has a weird set of abstractions not seen outside it. That makes it something of a pain to work on. Weird projects merit some respect in that regard: they will not be easy. On the other hand, weird projects sometimes blaze new trails, and that is an awesome thing to be a part of.
 	
 #### To Do
 	
