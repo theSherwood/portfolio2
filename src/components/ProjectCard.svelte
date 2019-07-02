@@ -116,6 +116,7 @@
 
   button {
     width: 100%;
+    line-height: 0px;
   }
 
   .svg-wrapper {
