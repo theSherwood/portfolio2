@@ -23,11 +23,6 @@
   <section in:fly="{{ x: -80, duration: 400, delay: 0 }}">
     <ContactLinks />
   </section>
-  <section>
-    <a href="/AdamSherwoodResume.pdf" target="_blank" rel="noopener noreferrer">
-      Résumé
-    </a>
-  </section>
 </main>
 {/if}
 
@@ -56,5 +51,4 @@
     opacity: 0.7;
     z-index: -1;
   }
-
 </style>
