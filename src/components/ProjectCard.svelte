@@ -110,7 +110,7 @@
     width: 100%;
   }
 
-  a:hover, :global(a):hover {
+  a:hover, div :global(a):hover {
     text-decoration: none;
   }
 
