@@ -1,5 +1,6 @@
 <script>
   import EmailIcon from './EmailIcon.svelte';
+  import ResumeIcon from './ResumeIcon.svelte';
   import TwitterIcon from './TwitterIcon.svelte';
   import GithubIcon from './GithubIcon.svelte';
   import CodePenIcon from './CodePenIcon.svelte';
@@ -25,6 +26,11 @@
   }
 </script>
 
+<div>
+<a href="/AdamSherwoodResume.pdf" target="_blank" rel="noopener noreferrer" title="Résumé">
+  <ResumeIcon size="1.5em"/>
+  <span>Résumé</span>
+</a>
 <a href="{'mailto:'+link}'"  title="Email Address">
   <EmailIcon size="1.5em"/>
   <span>{link}</span>
@@ -41,16 +47,20 @@
   <TwitterIcon size="1.5em"/>
   <span>@adamthesherwood</span>
 </a>
-
+</div>
 
 <style>
+  .contact {
+    font-size: 1.1em;
+  }
+
   a {
     display: block;
     width: max-content;
-    margin: .4em 0px;
+    margin: 1em 0px;
   }
 
-  :global(svg) {
+  div :global(svg) {
     vertical-align: bottom;
   }
 
@@ -58,4 +68,9 @@
     margin-left: .5em;
   }
 
+  @media only screen and (max-width: 500px) {
+    .contact {
+      font-size: 1em;
+    }
+  }
 </style>
