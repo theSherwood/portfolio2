@@ -60,6 +60,14 @@
     margin: 1em 0px;
   }
 
+  a:hover {
+    text-decoration: none;
+  }
+
+  a:hover > span {
+    text-decoration: underline;
+  }
+
   div :global(svg) {
     vertical-align: bottom;
   }
