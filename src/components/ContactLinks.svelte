@@ -35,7 +35,7 @@
 </a>
 <a href="https://codepen.io/theSherwood/" target="_blank" rel="noopener noreferrer" title="CodePen">
   <CodePenIcon size="1.5em"/>
-  <span>@thesherwood</span>
+  <span>@theSherwood</span>
 </a>
 <a href="https://twitter.com/adamthesherwood" target="_blank" rel="noopener noreferrer" title="Twitter">
   <TwitterIcon size="1.5em"/>
