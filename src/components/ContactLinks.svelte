@@ -2,6 +2,7 @@
   import EmailIcon from './EmailIcon.svelte';
   import TwitterIcon from './TwitterIcon.svelte';
   import GithubIcon from './GithubIcon.svelte';
+  import CodePenIcon from './CodePenIcon.svelte';
 
   // Email obfuscator script 2.1 by Tim Williams, University of Arizona
   // Random encryption key feature coded by Andrew Moulden
@@ -24,23 +25,29 @@
   }
 </script>
 
-<a href="{'mailto:'+link}'">
+<a href="{'mailto:'+link}'"  title="Email Address">
   <EmailIcon size="1.5em"/>
   <span>{link}</span>
 </a>
-<a href="https://github.com/theSherwood" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/theSherwood" target="_blank" rel="noopener noreferrer"  title="GitHub">
   <GithubIcon size="1.5em"/>
   <span>@theSherwood</span>
 </a>
-<a href="https://twitter.com/adamthesherwood" target="_blank" rel="noopener noreferrer">
+<a href="https://codepen.io/theSherwood/" target="_blank" rel="noopener noreferrer" title="CodePen">
+  <CodePenIcon size="1.5em"/>
+  <span>@thesherwood</span>
+</a>
+<a href="https://twitter.com/adamthesherwood" target="_blank" rel="noopener noreferrer" title="Twitter">
   <TwitterIcon size="1.5em"/>
   <span>@adamthesherwood</span>
 </a>
+
 
 <style>
   a {
     display: block;
     width: max-content;
+    margin: .4em 0px;
   }
 
   :global(svg) {
