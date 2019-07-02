@@ -15,6 +15,7 @@
     { "src": "/(.*).jpg", "dest": "/$1.jpg" },
     { "src": "/(.*).png", "dest": "/$1.png" },
     { "src": "/(.*).css", "dest": "/$1.css" },
+    { "src": "/(.*).pdf", "dest": "/$1.pdf" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
