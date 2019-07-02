@@ -1,5 +1,4 @@
 <script>
-  import { Router, Route } from "svero";
   import { onMount } from "svelte";
   import { fly } from "svelte/transition";
 
