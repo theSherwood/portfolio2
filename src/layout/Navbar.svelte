@@ -49,7 +49,7 @@
   nav {
     max-width: 800px;
     margin: auto;
-    padding: 20px;
+    padding: 20px 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 2rem;
