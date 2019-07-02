@@ -32,16 +32,6 @@ const projects = [
     info: "reconjs"
   },
   {
-    title: "Bibliostack",
-    image: "none",
-    blurb: "MERN stack app that makes shopping for a stack of books a breeze",
-    links: {
-      website: "https://www.bibliostack.com",
-      github: "https://github.com/theSherwood/Bibliostack"
-    },
-    info: "bibliostack"
-  },
-  {
     title: "ReconJS Site",
     image: "none",
     blurb: "Nextjs app that gamifies ReconJS in order to improve its security",
@@ -50,6 +40,16 @@ const projects = [
       github: "https://github.com/theSherwood/reconjs-site"
     },
     info: "reconjs-site"
+  },
+  {
+    title: "Bibliostack",
+    image: "none",
+    blurb: "MERN stack app that makes shopping for a stack of books a breeze",
+    links: {
+      website: "https://www.bibliostack.com",
+      github: "https://github.com/theSherwood/Bibliostack"
+    },
+    info: "bibliostack"
   },
   {
     title: "this website",
