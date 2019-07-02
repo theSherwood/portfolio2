@@ -2,7 +2,8 @@ const projects = [
   {
     title: "RegexXP",
     image: "none",
-    blurb: "MERN stack app for learning regular expressions in javascript",
+    blurb:
+      "MERN stack app for learning regular expressions in JavaScript by creating challenges and solving the challenges of other users",
     links: {
       website: "https://www.regexxp.online",
       github: "https://github.com/theSherwood/RegexXP"
@@ -13,7 +14,7 @@ const projects = [
     title: "Mentat",
     image: "none",
     blurb:
-      "A series of UI plugins for TiddlyWiki, written in HTML, CSS, and Javascript",
+      "A series of UI/UX plugins for TiddlyWiki, written in HTML, CSS, and JavaScript",
     links: {
       demo: "https://thesherwood.github.io/Mentat/",
       github: "https://github.com/theSherwood/Mentat"
@@ -24,7 +25,7 @@ const projects = [
     title: "ReconJS",
     image: "none",
     blurb:
-      "A Javascript library that statically analyzes arbitrary Javascript code for security threats",
+      "A JavaScript library that statically analyzes arbitrary JavaScript code for security threats",
     links: {
       github: "https://github.com/theSherwood/ReconJS"
     },
@@ -45,7 +46,7 @@ const projects = [
     image: "none",
     blurb: "Nextjs app that gamifies ReconJS in order to improve its security",
     links: {
-      website: "http://reconjs-site.thesherwood.now.sh/",
+      website: "https://reconjs-site.thesherwood.now.sh/",
       github: "https://github.com/theSherwood/reconjs-site"
     },
     info: "reconjs-site"
