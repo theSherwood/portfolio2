@@ -1,3 +1,8 @@
+```js exec
+import DelayLink from "../../components/DelayLink.svelte";
+import { pageTransitionHelper } from "../../helpers/pageTransitionHelper";
+```
+
 ### Where I Am
 
-I'm a husband and a father. I'm finishing up my masters at the Royal College of Art. I'll be graduating in a couple of weeks, just in time for a career change! While art has helped shape me, programming and the web have beguiled me. I'm currently searching for a programming job and am willing to relocate. If you're looking to hire, get in touch!
+I'm a husband and a father. I'm finishing up my masters at the Royal College of Art. I'll be graduating in a couple of weeks, just in time for a career change! While art has helped shape me, programming and the web have beguiled me. I'm currently searching for a programming job and am willing to relocate. If you're looking to hire, <DelayLink href="/contact" delay="{200}" callback="{pageTransitionHelper}">get in touch</DelayLink>!
