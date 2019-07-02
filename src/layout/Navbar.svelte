@@ -24,11 +24,6 @@
     >
   </div>
   <div transition:fly="{{y: -50, duration: randDuration() }}">
-    <DelayLink href="/bio" delay="{200}" callback="{pageTransitionHelper}"
-      ><button class:active="{$route === '/bio'}">Bio</button></DelayLink
-    >
-  </div>
-  <div transition:fly="{{y: -50, duration: randDuration() }}">
     <DelayLink href="/projects" delay="{200}" callback="{pageTransitionHelper}"
       ><button class:active="{$route === '/projects'}">
         Projects
@@ -36,8 +31,15 @@
     >
   </div>
   <div transition:fly="{{y: -50, duration: randDuration() }}">
-    <DelayLink href="/cv" delay="{200}" callback="{pageTransitionHelper}"
-      ><button class:active="{$route === '/cv'}">CV</button></DelayLink
+    <DelayLink href="/bio" delay="{200}" callback="{pageTransitionHelper}"
+      ><button class:active="{$route === '/bio'}">Bio</button></DelayLink
+    >
+  </div>
+  <div transition:fly="{{y: -50, duration: randDuration() }}">
+    <DelayLink href="/contact" delay="{200}" callback="{pageTransitionHelper}"
+      ><button class:active="{$route === '/contact'}">
+        Contact
+      </button></DelayLink
     >
   </div>
   {/if}

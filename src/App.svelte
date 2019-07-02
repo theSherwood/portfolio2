@@ -5,7 +5,7 @@
 
   import Navbar from './layout/Navbar.svelte';
   import Home from './views/Home.svelte';
-  import CV from './views/CV.svelte'
+  import Contact from './views/Contact.svelte'
   import Bio from './views/Bio.svelte'
   import Projects from './views/Projects.svelte'
   import ProjectWrapper from './views/ProjectWrapper.svelte'
@@ -18,7 +18,7 @@
     <Route path="*" component={Home} />
     <Route path="/projects" component={Projects} />
     <Route path="/bio" component={Bio} />
-    <Route path="/cv" component={CV} />
+    <Route path="/contact" component={Contact} />
 
     <!-- Project Routes -->
     <Route path="/projects/:project" component={ProjectWrapper} />
