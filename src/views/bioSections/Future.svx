@@ -2,18 +2,17 @@
 
 #### Short Term
 
-We'll be moving back to the U.S. in the next few months, and the goal is to have a job in the industry to move back to. The web is an awesome place to be and not just because of how many jobs there are, but because the problems associated with the interconnectivity of the species are fascinating.
+The immediate goal is a job in the industry. The web is an awesome place to be and not just because of how many jobs there are, but because the problems associated with the interconnectivity of the species are fascinating.
 
-Making the web better is going to take more than Javascript. There are two principal technologies/techniques that I think will increasingly important, which I'm going to start working with next:
+Making the web better is going to take more than Javascript. There are two principal technologies/techniques that I think will become increasingly important, which I'm going to start working with next:
 
-* Rust
-    * It forms a bridge between the web (through webassembly) and systems programming (a necessity for fixing the intrinsic issues of the modern web).
-* parallelization & functional programming
-    * Cloud computing and IoT make these kinds of techniques increasingly fruitful. Additionally, improvements to CPUs are stalling. Performance-conscious software is going to need to be able to access multiple cores.
+- Rust
+  - It forms a bridge between the web (through webassembly) and systems programming (a necessity for fixing the intrinsic issues of the modern web).
+- parallelization & functional programming
+  - Cloud computing and IoT make these kinds of techniques increasingly fruitful. Additionally, improvements to CPUs are stalling. Performance-conscious software is going to need to be able to access multiple cores.
 
- That's why I'm diving into Rust and functional programming next!
+That's why I'm diving into Rust and functional programming next!
 
 #### Long Term
 
-The invention of the internet is the biggest event of the 20th century. The internet, and the modern tech stack more generally, will shape the lives and destinies of untold billions of people. The web is amazing. But my kids deserve something better. We all deserve something better. I want to be a part of that reinvention. 
- 
+The invention of the internet is the biggest event of the 20th century. The internet, and the modern tech stack more generally, will shape the lives and destinies of untold billions of people. The web is amazing. But my kids deserve something better. We all deserve something better. I want to be a part of that reinvention.
