@@ -6,8 +6,6 @@
   import Past from './bioSections/Past.svx'
   import Present from './bioSections/Present.svx'
 
-  import ContactLinks from '../components/ContactLinks.svelte'
-
   import { pageTransition } from "../stores/pageTransition";
   import { route } from "../stores/route";
   export let router = {};
@@ -24,9 +22,6 @@
 
 {#if render}
 <main out:fly="{{ y: 80, duration: 200}}">
-  <section in:fly="{{ x: -80, duration: 400, delay: 0 }}">
-    <ContactLinks />
-  </section>
   <section in:fly="{{ x: -80, duration: 400, delay: 0 }}">
     <Present />
   </section>
